@@ -1,0 +1,23 @@
+{
+  "slug": "about",
+  "title": "About Us",
+  "sections": [
+    { "type": "hero", "headline": "Who We Are", "subheadline": "A UAE-based, value-add distributor specializing in premium audio-visual solutions. We empower consultants and integrators across the GCC with carefully selected brands and deep technical expertise." },
+    {
+      "type": "values",
+      "title": "Our Core Values",
+      "items": [
+        { "title": "Integrity & Precision", "icon": "shield", "description": "We uphold the highest standards of honesty and accuracy in every project." },
+        { "title": "Technical Leadership", "icon": "cpu", "description": "Our expertise guides our partners to the best possible AV solutions." },
+        { "title": "Partner Empowerment", "icon": "users", "description": "We provide the tools, training, and support for our partners to succeed." },
+        { "title": "Focused Innovation", "icon": "lightbulb", "description": "We continuously seek out and champion cutting-edge, reliable technologies." },
+        { "title": "Premium Brand Experience", "icon": "gem", "description": "We ensure every interaction reflects the quality of the brands we represent." }
+      ]
+    },
+    {
+      "type": "coverage",
+      "title": "Territory",
+      "regions": ["UAE", "KSA", "Qatar", "Kuwait", "Bahrain", "Oman"]
+    }
+  ]
+}

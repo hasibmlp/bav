@@ -1,0 +1,17 @@
+{
+  "slug": "brands",
+  "title": "Brands & Partners",
+  "sections": [
+    {
+      "type": "brands",
+      "items": [
+        { "name": "Brand A", "url": "#", "logo": { "src": "/logos/brand-a.png", "alt": "Brand A" } },
+        { "name": "Brand B", "url": "#", "logo": { "src": "/logos/brand-b.png", "alt": "Brand B" } },
+        { "name": "Brand C", "url": "#", "logo": { "src": "/logos/brand-c.png", "alt": "Brand C" } },
+        { "name": "Brand D", "url": "#", "logo": { "src": "/logos/brand-d.png", "alt": "Brand D" } },
+        { "name": "Brand E", "url": "#", "logo": { "src": "/logos/brand-e.png", "alt": "Brand E" } },
+        { "name": "Brand F", "url": "#", "logo": { "src": "/logos/brand-f.png", "alt": "Brand F" } }
+      ]
+    }
+  ]
+}

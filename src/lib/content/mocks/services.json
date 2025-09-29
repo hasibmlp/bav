@@ -1,0 +1,17 @@
+{
+  "slug": "services",
+  "title": "Services",
+  "sections": [
+    { "type": "hero", "headline": "Our Services", "subheadline": "A UAE-based, value-add distributor specializing in premium audio-visual solutions. We empower consultants and integrators across the GCC with carefully selected brands and deep technical expertise." },
+    {
+      "type": "services",
+      "items": [
+        { "title": "Workspace Management", "description": "Intelligent solutions for modern offices and collaborative spaces.", "icon": "office" },
+        { "title": "Command Center Management", "description": "Robust systems for critical monitoring and control environments.", "icon": "command" },
+        { "title": "Hybrid Classrooms", "description": "Engaging and seamless audio-visual technology for education.", "icon": "classroom" },
+        { "title": "Residential Automation", "description": "Premium smart home experiences with integrated control.", "icon": "home" },
+        { "title": "Retail Spaces", "description": "Dynamic digital signage and audio systems for impactful customer engagement.", "icon": "retail" }
+      ]
+    }
+  ]
+}

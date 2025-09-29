@@ -1,0 +1,110 @@
+{
+  "slug": "home",
+  "title": "Home",
+  "sections": [
+    {
+      "type": "hero",
+      "eyebrow": "Brilliance. Accuracy. Vantage.",
+      "headline": "Premium AV Distribution for Consultants & Integrators",
+      "subheadline": "UAE-based, GCC coverage, project-driven technical support.",
+      "ctaLabel": "Contact Us",
+      "ctaHref": "/contact",
+      "image": {
+        "src": "/images/bav-hero.jpg",
+        "alt": "Hero Image"
+      }
+    },
+    {
+      "type": "brands",
+      "title": "Brand Portfolio",
+      "items": [
+        {
+          "name": "Brand A",
+          "url": "#",
+          "logo": { "src": "/logos/brand-a.png", "alt": "Brand A" }
+        },
+        {
+          "name": "Brand B",
+          "url": "#",
+          "logo": { "src": "/logos/brand-b.png", "alt": "Brand B" }
+        },
+        {
+          "name": "Brand C",
+          "url": "#",
+          "logo": { "src": "/logos/brand-c.png", "alt": "Brand C" }
+        },
+        {
+          "name": "Brand D",
+          "url": "#",
+          "logo": { "src": "/logos/brand-d.png", "alt": "Brand D" }
+        },
+        {
+          "name": "Brand E",
+          "url": "#",
+          "logo": { "src": "/logos/brand-e.png", "alt": "Brand E" }
+        },
+        {
+          "name": "Brand F",
+          "url": "#",
+          "logo": { "src": "/logos/brand-f.png", "alt": "Brand F" }
+        },
+        {
+          "name": "Brand A",
+          "url": "#",
+          "logo": { "src": "/logos/brand-a.png", "alt": "Brand A" }
+        },
+        {
+          "name": "Brand B",
+          "url": "#",
+          "logo": { "src": "/logos/brand-b.png", "alt": "Brand B" }
+        },
+        {
+          "name": "Brand C",
+          "url": "#",
+          "logo": { "src": "/logos/brand-c.png", "alt": "Brand C" }
+        },
+        {
+          "name": "Brand D",
+          "url": "#",
+          "logo": { "src": "/logos/brand-d.png", "alt": "Brand D" }
+        },
+        {
+          "name": "Brand E",
+          "url": "#",
+          "logo": { "src": "/logos/brand-e.png", "alt": "Brand E" }
+        },
+        {
+          "name": "Brand F",
+          "url": "#",
+          "logo": { "src": "/logos/brand-f.png", "alt": "Brand F" }
+        }
+      ]
+    },
+    {
+      "type": "services",
+      "title": "What We Offer",
+      "items": [
+        { "title": "Exclusive Brand Representation" },
+        { "title": "Technical & Project Support" },
+        { "title": "Local Stock, Demo Units & Training" },
+        { "title": "Pre-sales & Design Consultancy" }
+      ]
+    },
+    {
+      "type": "coverage",
+      "title": "Territory Coverage",
+      "regions": ["UAE (HQ)", "KSA", "Qatar", "Kuwait", "Bahrain", "Oman"]
+    },
+    {
+      "type": "whyus",
+      "title": "Why Choose Us",
+      "bullets": [
+        "Fewer brands, deeper value",
+        "Consultant-first approach",
+        "Premium support per project",
+        "Trusted channel network",
+        "Performance-led distribution"
+      ]
+    }
+  ]
+}
