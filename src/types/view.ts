@@ -11,16 +11,6 @@ export type HeroSection = {
   image?: ImageView
 }
 
-export type WhoWeAreSection = {
-  type: 'who_we_are'
-  eyebrow?: string
-  headline?: string
-  subheadline?: string
-  ctaLabel?: string
-  ctaHref?: string
-  image?: ImageView
-}
-
 export type ServicesSection = {
   type: 'services'
   title?: string
@@ -60,23 +50,9 @@ export type CTASection = {
   ctaHref?: string
 }
 
-export type SolutionsSection = {
-  type: 'solutions'
-  title: string
-  description?: string
-  items: {
-    title: string
-    description: string
-    audience?: string
-    image: ImageView
-  }[]
-}
-
 export type SectionView =
   | HeroSection
-  | WhoWeAreSection
   | ServicesSection
-  | SolutionsSection
   | BrandsSection
   | ValuesSection
   | CoverageSection

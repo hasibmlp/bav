@@ -15,54 +15,6 @@
       }
     },
     {
-      "type": "who_we_are",
-      "headline": "Who We Are",
-      "subheadline": "Empowering AV consultants and integrators with premium, reliable solutions."
-    },
-    {
-      "type": "solutions",
-      "title": "Our Solutions",
-      "description": "Tailored AV systems for every environment.",
-      "items": [
-        {
-          "title": "Smart Meeting & Collaboration Spaces",
-          "description": "Modern conference rooms with smart scheduling, touch displays, and seamless integration with Microsoft Teams, Zoom, Webex, and Google Meet.",
-          "audience": "Designed for consultants, corporates, and integrators who want reliable, easy-to-use solutions.",
-          "image": { "src": "/images/solution-1.jpg", "alt": "Smart Meeting Room" }
-        },
-        {
-          "title": "Learning & Training Environments",
-          "description": "Interactive classrooms and hybrid learning setups with digital whiteboards, immersive cameras, and high-quality sound.",
-          "audience": "Suitable for schools, universities, auditoriums, and training centers.",
-          "image": { "src": "/images/solution-2.jpg", "alt": "Hybrid Classroom" }
-        },
-        {
-          "title": "Houses of Worship & Auditoriums",
-          "description": "Crystal-clear sound, large-format projection, and streaming tools to reach audiences both onsite and online.",
-          "audience": "Tailored audio and video systems designed to enhance the worship or event experience.",
-          "image": { "src": "/images/solution-3.jpg", "alt": "Auditorium" }
-        },
-        {
-          "title": "Command & Control Centers",
-          "description": "Large video walls, real-time streaming, and secure monitoring systems.",
-          "audience": "Built for government, enterprise, and critical operations that demand reliability and clarity.",
-          "image": { "src": "/images/solution-4.jpg", "alt": "Command Center" }
-        },
-        {
-          "title": "Immersive Experience Technology",
-          "description": "AR/VR/XR, simulation, and 360° video solutions for training, creative production, and experiential marketing.",
-          "audience": "Perfect for enterprises, content creators, and innovation hubs.",
-          "image": { "src": "/images/solution-5.jpg", "alt": "VR Experience" }
-        },
-        {
-          "title": "Media & Enterprise Broadcast",
-          "description": "Professional cameras, high-fidelity audio, and streaming systems for live events, corporate communication, and online broadcasting.",
-          "audience": "Ensures professional-quality visuals and sound every time.",
-          "image": { "src": "/images/solution-6.jpg", "alt": "Broadcast Studio" }
-        }
-      ]
-    },
-    {
       "type": "brands",
       "title": "Brand Portfolio",
       "items": [
@@ -90,6 +42,41 @@
           "name": "Brand E",
           "url": "#",
           "logo": { "src": "/logos/brand-e.png", "alt": "Brand E" }
+        },
+        {
+          "name": "Brand F",
+          "url": "#",
+          "logo": { "src": "/logos/brand-f.png", "alt": "Brand F" }
+        },
+        {
+          "name": "Brand A",
+          "url": "#",
+          "logo": { "src": "/logos/brand-a.png", "alt": "Brand A" }
+        },
+        {
+          "name": "Brand B",
+          "url": "#",
+          "logo": { "src": "/logos/brand-b.png", "alt": "Brand B" }
+        },
+        {
+          "name": "Brand C",
+          "url": "#",
+          "logo": { "src": "/logos/brand-c.png", "alt": "Brand C" }
+        },
+        {
+          "name": "Brand D",
+          "url": "#",
+          "logo": { "src": "/logos/brand-d.png", "alt": "Brand D" }
+        },
+        {
+          "name": "Brand E",
+          "url": "#",
+          "logo": { "src": "/logos/brand-e.png", "alt": "Brand E" }
+        },
+        {
+          "name": "Brand F",
+          "url": "#",
+          "logo": { "src": "/logos/brand-f.png", "alt": "Brand F" }
         }
       ]
     },

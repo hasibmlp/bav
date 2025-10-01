@@ -4,7 +4,7 @@
 @theme {
   --color-brand: #176D75; /* Teal */
   --color-brand-light: #9DB4AD; /* Light Grey-Green */
-  --color-background-dark: #021f2f; /* Darker Background */
+  --color-background-dark: #011520; /* Darker Background */
 }
 
 html, body { height: 100%; }
@@ -14,17 +14,4 @@ a { @apply underline-offset-2 hover:underline; }
 /* Make Swiper autoplay feel continuous (marquee-like) */
 .swiper-wrapper {
   transition-timing-function: linear !important;
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 40s linear infinite;
 }

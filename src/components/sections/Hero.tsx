@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export function Hero({ data }: { data: HeroSection }) {
   return (
-    <section className="relative h-screen max-h-[900px] flex items-center justify-center text-center text-white">
+    <section className="relative min-h-screen flex items-center justify-center text-center text-white">
       {data.image?.src && (
         <Image
           src={data.image.src}
@@ -19,7 +19,7 @@ export function Hero({ data }: { data: HeroSection }) {
         {data.eyebrow && (
           <p className="mb-3 text-sm font-medium tracking-wide text-sky-300/80">{data.eyebrow}</p>
         )}
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-semibold leading-none">
+        <h1 className="text-3xl/tight sm:text-4xl/tight lg:text-6xl/tight font-semibold">
           {data.headline}
         </h1>
         {data.subheadline && (
