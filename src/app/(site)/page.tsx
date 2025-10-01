@@ -1,6 +1,8 @@
 // src/app/(site)/page.tsx (Home)
 import { getPageBySlug } from '@/lib/data'
 import { Hero } from '@/components/sections/Hero'
+import { WhoWeAre } from '@/components/sections/WhoWeAre'
+import { Solutions } from '@/components/sections/Solutions'
 import { BrandsWall } from '@/components/sections/BrandsWall'
 import { Coverage } from '@/components/sections/Coverage'
 import { WhyUs } from '@/components/sections/WhyUs'
@@ -16,8 +18,12 @@ export default async function Page() {
 
   const render = (s: SectionView, i: number) => {
     switch (s.type) {
-      case 'hero':  
+      case 'hero':
         return <Hero key={i} data={s} />
+      case 'who_we_are':
+        return <WhoWeAre key={i} data={s} />
+      case 'solutions':
+        return <Solutions key={i} data={s} />
       case 'services':
         return (
           <Suspense key={i} fallback={<div className="py-12 text-neutral-500">Loading services…</div>}>
