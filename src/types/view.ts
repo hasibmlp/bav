@@ -14,7 +14,7 @@ export type HeroSection = {
 export type ServicesSection = {
   type: 'services'
   title?: string
-  items: { title: string; description?: string; icon?: string }[]
+  items: { title: string; description?: string; icon?: string; image?: ImageView }[]
 }
 
 export type BrandsSection = {
@@ -50,6 +50,22 @@ export type CTASection = {
   ctaHref?: string
 }
 
+export type ContactSection = {
+  type: 'contact'
+}
+
+export type SolutionsSection = {
+  type: 'solutions'
+  title: string
+  description?: string
+  items: {
+    title: string
+    description: string
+    audience?: string
+    image: ImageView
+  }[]
+}
+
 export type SectionView =
   | HeroSection
   | ServicesSection
@@ -58,6 +74,7 @@ export type SectionView =
   | CoverageSection
   | WhyUsSection
   | CTASection
+  | ContactSection
 
 export type PageView = {
   slug: string

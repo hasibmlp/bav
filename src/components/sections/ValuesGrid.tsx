@@ -61,20 +61,20 @@ export function ValuesGrid({ data }: { data: ValuesSection }) {
             <div
               key={i}
               className="
-                rounded-xl border border-neutral-200/70 dark:border-neutral-800/70
-                bg-white/70 dark:bg-neutral-900/40 p-6 md:p-8
+                rounded-xl border border-neutral-200/70
+                bg-white p-6 md:p-8
               "
             >
               {item.icon && (
-                <div className="mb-4 h-12 w-12 rounded-lg grid place-items-center bg-sky-100 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400">
+                <div className="mb-4 h-12 w-12 rounded-lg grid place-items-center bg-sky-100 text-sky-600">
                   {icons[item.icon]}
                 </div>
               )}
-              <h3 className="text-lg md:text-xl font-semibold text-neutral-900 dark:text-neutral-50">
+              <h3 className="text-lg md:text-xl font-semibold text-neutral-900">
                 {item.title}
               </h3>
               {item.description && (
-                <p className="mt-2 text-base text-neutral-700 dark:text-neutral-300">
+                <p className="mt-2 text-base text-neutral-700">
                   {item.description}
                 </p>
               )}

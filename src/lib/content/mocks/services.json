@@ -2,15 +2,50 @@
   "slug": "services",
   "title": "Services",
   "sections": [
-    { "type": "hero", "headline": "Our Services", "subheadline": "A UAE-based, value-add distributor specializing in premium audio-visual solutions. We empower consultants and integrators across the GCC with carefully selected brands and deep technical expertise." },
+    {
+      "type": "hero",
+      "headline": "Our Services",
+      "subheadline": "Comprehensive solutions for a wide range of AV applications."
+    },
     {
       "type": "services",
+      "title": "Our Services",
       "items": [
-        { "title": "Workspace Management", "description": "Intelligent solutions for modern offices and collaborative spaces.", "icon": "office" },
-        { "title": "Command Center Management", "description": "Robust systems for critical monitoring and control environments.", "icon": "command" },
-        { "title": "Hybrid Classrooms", "description": "Engaging and seamless audio-visual technology for education.", "icon": "classroom" },
-        { "title": "Residential Automation", "description": "Premium smart home experiences with integrated control.", "icon": "home" },
-        { "title": "Retail Spaces", "description": "Dynamic digital signage and audio systems for impactful customer engagement.", "icon": "retail" }
+        {
+          "title": "AV System Design & Consulting",
+          "description": "Designing end-to-end audio, video, and collaboration systems tailored to client needs.",
+          "image": { "src": "/images/service-1.jpg", "alt": "AV System Design" }
+        },
+        {
+          "title": "Integration & Installation Support",
+          "description": "Assisting integrators with deploying projectors, displays, and control systems.",
+          "image": { "src": "/images/service-2.jpg", "alt": "Integration Support" }
+        },
+        {
+          "title": "Collaboration & Workplace Solutions",
+          "description": "Building modern workplaces with video conferencing, digital whiteboards, and room booking.",
+          "image": { "src": "/images/service-3.jpg", "alt": "Workplace Solutions" }
+        },
+        {
+          "title": "Content Creation & Streaming",
+          "description": "Providing professional tools for live streaming, enterprise broadcast, and content capture.",
+          "image": { "src": "/images/service-4.jpg", "alt": "Streaming Solutions" }
+        },
+        {
+          "title": "Immersive & Experiential Technology",
+          "description": "Delivering AR/VR/XR and simulation solutions using advanced 360° cameras.",
+          "image": { "src": "/images/service-5.jpg", "alt": "Immersive Technology" }
+        },
+        {
+          "title": "Premium Audio Experiences",
+          "description": "Designing sound solutions for boardrooms, auditoriums, and houses of worship.",
+          "image": { "src": "/images/service-6.jpg", "alt": "Audio Experiences" }
+        },
+        {
+          "title": "After-Sales & Technical Support",
+          "description": "Offering localized support, training, and troubleshooting for our partners and clients.",
+          "image": { "src": "/images/service-7.jpg", "alt": "Technical Support" }
+        }
       ]
     }
   ]
