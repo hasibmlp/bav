@@ -7,8 +7,8 @@
       "eyebrow": "Brilliance. Accuracy. Vantage.",
       "headline": "Premium AV Distribution for Consultants & Integrators",
       "subheadline": "UAE-based, GCC coverage, project-driven technical support.",
-      "ctaLabel": "Contact Us",
-      "ctaHref": "/contact",
+      "ctaLabel": "Explore",
+      "ctaHref": "#services",
       "image": {
         "src": "/images/bav-hero.jpg",
         "alt": "Hero Image"
@@ -95,12 +95,43 @@
     },
     {
       "type": "services",
-      "title": "What We Offer",
+      "title": "Services We Provide",
       "items": [
-        { "title": "Exclusive Brand Representation" },
-        { "title": "Technical & Project Support" },
-        { "title": "Local Stock, Demo Units & Training" },
-        { "title": "Pre-sales & Design Consultancy" }
+        {
+          "title": "AV System Design & Consulting",
+          "description": "Designing end-to-end audio, video, and collaboration systems tailored to client needs. Helping consultants and integrators choose the right mix of cameras, displays, control systems, and audio solutions.",
+          "image": { "src": "/images/service-1.jpg", "alt": "AV System Design" }
+        },
+        {
+          "title": "Integration & Installation Support",
+          "description": "Assisting integrators with deploying projectors, displays, control systems, and immersive technologies. Ensuring smooth setup in meeting rooms, classrooms, auditoriums, retail, and houses of worship.",
+          "image": { "src": "/images/service-2.jpg", "alt": "Integration Support" }
+        },
+        {
+          "title": "Collaboration & Workplace Solutions",
+          "description": "Building modern workplaces with video conferencing, digital whiteboards, room booking systems, and automation. Enabling hybrid collaboration across Teams, Zoom, Webex, and Google Meet.",
+          "image": { "src": "/images/service-3.jpg", "alt": "Workplace Solutions" }
+        },
+        {
+          "title": "Content Creation & Streaming Solutions",
+          "description": "Providing professional tools for live streaming, enterprise broadcast, and high-quality content capture. Supporting corporate communications, training, events, and education with Canon & Insta360 solutions.",
+          "image": { "src": "/images/service-4.jpg", "alt": "Streaming Solutions" }
+        },
+        {
+          "title": "Immersive & Experiential Technology",
+          "description": "Delivering AR/VR/XR and simulation solutions using advanced 360° cameras and visualization tools. Creating interactive experiences for training, marketing, and innovation hubs.",
+          "image": { "src": "/images/service-5.jpg", "alt": "Immersive Technology" }
+        },
+        {
+          "title": "Premium Audio Experiences",
+          "description": "Designing sound solutions for boardrooms, auditoriums, cinemas, and houses of worship. Ensuring crystal-clear, immersive sound with premium speaker and acoustic technologies.",
+          "image": { "src": "/images/service-6.jpg", "alt": "Audio Experiences" }
+        },
+        {
+          "title": "After-Sales & Technical Support",
+          "description": "Offering localized support, training, and troubleshooting for partners and clients. Helping maintain long-term reliability and performance of AV systems.",
+          "image": { "src": "/images/service-7.jpg", "alt": "Technical Support" }
+        }
       ]
     },
     {

@@ -28,10 +28,10 @@ export default function Brands({ items }: { items: BrandItem[] }) {
           alt={b.logo.alt || b.name}
           width={b.logo.width ?? 140}
           height={b.logo.height ?? 70}
-          className="max-h-12 md:max-h-16 w-auto object-contain filter brightness-0 invert"
+          className="max-h-12 md:max-h-16 w-auto object-contain"
         />
       )}
-      <span className="font-medium md:text-lg text-neutral-700 dark:text-neutral-300">{b.name}</span>
+      <span className="font-medium md:text-lg text-black">{b.name}</span>
     </div>
   )
 

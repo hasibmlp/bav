@@ -31,43 +31,57 @@ export function ContactForm() {
       {/* honeypot */}
       <input type="text" name="hp" className="hidden" tabIndex={-1} autoComplete="off" />
 
-      <div className="grid gap-1">
-        <label>Name*</label>
-        <input required name="name" className="border rounded p-2" />
+      <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid gap-1">
+          <label htmlFor="name" className="text-sm font-medium text-neutral-700">Name*</label>
+          <input id="name" required name="name" className="block w-full rounded-md border border-neutral-300 px-3 py-3 focus:border-sky-500 focus:ring-sky-500 sm:text-sm" />
+        </div>
+
+        <div className="grid gap-1">
+          <label htmlFor="company" className="text-sm font-medium text-neutral-700">Company*</label>
+          <input id="company" required name="company" className="block w-full rounded-md border border-neutral-300 px-3 py-3 focus:border-sky-500 focus:ring-sky-500 sm:text-sm" />
+        </div>
+      </div>
+
+      <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid gap-1">
+          <label htmlFor="email" className="text-sm font-medium text-neutral-700">Email*</label>
+          <input id="email" required type="email" name="email" className="block w-full rounded-md border border-neutral-300 px-3 py-3 focus:border-sky-500 focus:ring-sky-500 sm:text-sm" />
+        </div>
+
+        <div className="grid gap-1">
+          <label htmlFor="phone" className="text-sm font-medium text-neutral-700">Phone</label>
+          <input id="phone" name="phone" className="block w-full rounded-md border border-neutral-300 px-3 py-3 focus:border-sky-500 focus:ring-sky-500 sm:text-sm" />
+        </div>
       </div>
 
       <div className="grid gap-1">
-        <label>Company*</label>
-        <input required name="company" className="border rounded p-2" />
+        <label htmlFor="subject" className="text-sm font-medium text-neutral-700">Subject</label>
+        <input id="subject" name="subject" className="block w-full rounded-md border border-neutral-300 px-3 py-3 focus:border-sky-500 focus:ring-sky-500 sm:text-sm" />
       </div>
 
       <div className="grid gap-1">
-        <label>Email*</label>
-        <input required type="email" name="email" className="border rounded p-2" />
+        <label htmlFor="message" className="text-sm font-medium text-neutral-700">Message*</label>
+        <textarea id="message" required name="message" rows={6} className="block w-full rounded-md border border-neutral-300 px-3 py-3 focus:border-sky-500 focus:ring-sky-500 sm:text-sm" />
       </div>
 
-      <div className="grid gap-1">
-        <label>Phone</label>
-        <input name="phone" className="border rounded p-2" />
+      <div>
+        <button
+          type="submit"
+          disabled={status === 'loading'}
+          className="
+            w-full inline-flex items-center justify-center rounded-md
+            px-6 py-3 text-base font-medium
+            text-white
+            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-600
+            transition-transform duration-200 motion-safe:hover:scale-105
+            disabled:opacity-50 disabled:cursor-not-allowed
+          "
+          style={{ backgroundColor: 'var(--color-primary)' }}
+        >
+          {status === 'loading' ? 'Sending…' : 'Send Message'}
+        </button>
       </div>
-
-      <div className="grid gap-1">
-        <label>Subject</label>
-        <input name="subject" className="border rounded p-2" />
-      </div>
-
-      <div className="grid gap-1">
-        <label>Message*</label>
-        <textarea required name="message" rows={6} className="border rounded p-2" />
-      </div>
-
-      <button
-        type="submit"
-        disabled={status === 'loading'}
-        className="rounded border px-4 py-2 disabled:opacity-50"
-      >
-        {status === 'loading' ? 'Sending…' : 'Send Message'}
-      </button>
 
       {status === 'ok' && <p className="text-green-600">Thanks! We’ll be in touch shortly.</p>}
       {status === 'error' && <p className="text-red-600">{error}</p>}

@@ -5,6 +5,7 @@ import about from "@/lib/content/mocks/about.json";
 import services from "@/lib/content/mocks/services.json";
 import brands from "@/lib/content/mocks/brands.json";
 import whyus from "@/lib/content/mocks/why-us.json";
+import contact from "@/lib/content/mocks/contact.json";
 
 const pages: Record<string, PageView> = {
   "": home as PageView, // home at '/'
@@ -12,6 +13,7 @@ const pages: Record<string, PageView> = {
   services: services as PageView,
   brands: brands as PageView,
   "why-us": whyus as PageView,
+  contact: contact as PageView,
 };
 
 export async function getPageBySlug(slug: string): Promise<PageView | null> {

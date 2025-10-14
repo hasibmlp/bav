@@ -1,0 +1,14 @@
+{
+  "slug": "contact",
+  "title": "Contact Us",
+  "sections": [
+    {
+      "type": "hero",
+      "headline": "Get in Touch",
+      "subheadline": "We're here to help with any questions you may have. Reach out to us and we'll respond as soon as we can."
+    },
+    {
+      "type": "contact"
+    }
+  ]
+}
