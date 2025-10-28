@@ -12,7 +12,7 @@
       "items": [
         {
           "name": "Canon",
-          "logo": { "src": "/logos/brand-a.png", "alt": "Canon Logo" },
+          "logo": { "src": "/logos/bnc-b-4.jpeg", "alt": "Canon Logo" },
           "description": "Canon is a global leader in imaging solutions, offering world-class cameras, projectors, and visual communication tools trusted by professionals worldwide.",
           "features": [
             "High-performance projectors with superior color accuracy",
@@ -23,7 +23,7 @@
         },
         {
           "name": "Crestron",
-          "logo": { "src": "/logos/brand-b.png", "alt": "Crestron Logo" },
+          "logo": { "src": "/logos/bnc-b-3.jpeg", "alt": "Crestron Logo" },
           "description": "Crestron stands at the forefront of automation and control systems, transforming how people connect and collaborate through smart technology.",
           "features": [
             "Seamless AV and lighting control systems",
@@ -34,7 +34,7 @@
         },
         {
           "name": "Insta360",
-          "logo": { "src": "/logos/brand-c.png", "alt": "Insta360 Logo" },
+          "logo": { "src": "/logos/bnc-b-2.jpeg", "alt": "Insta360 Logo" },
           "description": "Insta360 redefines visual storytelling with its innovative 360° and action cameras that capture immersive, high-resolution content from every angle.",
           "features": [
             "360° capture and AI-powered editing tools",
@@ -45,7 +45,7 @@
         },
         {
           "name": "ViewSonic",
-          "logo": { "src": "/logos/brand-d.png", "alt": "ViewSonic Logo" },
+          "logo": { "src": "/logos/bnc-b-1.jpeg", "alt": "ViewSonic Logo" },
           "description": "ViewSonic is a global provider of visual display technology, offering a comprehensive range of monitors, projectors, and digital signage solutions.",
           "features": [
             "High-definition displays with industry-leading color accuracy",
@@ -56,7 +56,7 @@
         },
         {
           "name": "Devialet",
-          "logo": { "src": "/logos/brand-e.png", "alt": "Devialet Logo" },
+          "logo": { "src": "/logos/bnc-b-5.jpeg", "alt": "Devialet Logo" },
           "description": "Devialet is a French audio technology brand renowned for combining luxury design with revolutionary acoustic engineering.",
           "features": [
             "Patented audio amplification technology",

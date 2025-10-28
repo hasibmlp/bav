@@ -19,7 +19,6 @@ export function PartnersShowcase({ data }: { data: PartnersShowcaseSection }) {
               </div>
 
               {/* Name & Description */}
-              <h2 className="text-3xl font-bold text-neutral-900">{item.name}</h2>
               <p className="mt-4 max-w-2xl text-lg text-neutral-700">{item.description}</p>
 
               {/* Details Grid */}

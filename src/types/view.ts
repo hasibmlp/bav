@@ -107,10 +107,11 @@ export type PartnersShowcaseSection = {
 
 export type SolutionsShowcaseSection = {
   type: 'solutions_showcase'
+  title?: string
   items: {
     title: string
     description: string
-    extended_description?: string
+    poweredBy?: string
     image: ImageView
     features?: string[]
   }[]

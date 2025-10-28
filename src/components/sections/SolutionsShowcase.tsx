@@ -52,7 +52,6 @@ export function SolutionsShowcase({ data }: { data: SolutionsShowcaseSection }) 
           {data.items.map((item, index) => (
             <div
               key={index}
-              ref={(el) => (itemRefs.current[index] = el)}
               className="overflow-hidden rounded-lg shadow-sm transition-all duration-300"
               style={{
                 backgroundColor: openIndex === index ? '#FFFFFF' : '#F8F9FA',

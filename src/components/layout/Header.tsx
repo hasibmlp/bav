@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useDirection } from '@/context/DirectionProvider'
-import { MobileNav } from '@/components/layout/MobileNav'
+import MobileNav from '@/components/layout/MobileNav'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
 export function Header() {
