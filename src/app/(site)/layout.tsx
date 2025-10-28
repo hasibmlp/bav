@@ -11,13 +11,5 @@ export const metadata: Metadata = {
 }
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  )
+  return <>{children}</>
 }

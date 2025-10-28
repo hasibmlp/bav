@@ -1,0 +1,87 @@
+{
+  "slug": "sectors",
+  "title": "Sectors We Serve",
+  "sections": [
+    {
+      "type": "hero",
+      "headline": "Sectors We Serve",
+      "subheadline": "Providing specialized AV solutions across a diverse range of industries."
+    },
+    {
+      "type": "sectors_grid",
+      "items": [
+        {
+          "title": "Corporate & Enterprise",
+          "description": "Offices, meeting rooms, boardrooms, collaboration spaces",
+          "image": { "src": "/images/solution-1.jpg", "alt": "A modern corporate boardroom with a large video conference screen." }
+        },
+        {
+          "title": "Education",
+          "description": "Schools, universities, training centers, auditoriums, hybrid classrooms",
+          "image": { "src": "/images/solution-2.jpg", "alt": "A university lecture hall with students and a large projection screen." }
+        },
+        {
+          "title": "Hospitality",
+          "description": "Hotels, resorts, conference halls, event spaces",
+          "image": { "src": "/images/solution-3.jpg", "alt": "A luxury hotel lobby with ambient lighting and digital displays." }
+        },
+        {
+          "title": "Healthcare",
+          "description": "Hospitals, clinics, medical training facilities",
+          "image": { "src": "/images/solution-4.jpg", "alt": "A high-tech medical simulation room with multiple screens." }
+        },
+        {
+          "title": "Government & Defense",
+          "description": "Command centers, control rooms, municipal and defense operations",
+          "image": { "src": "/images/solution-5.jpg", "alt": "A government command and control center with a large video wall." }
+        },
+        {
+          "title": "Public Safety & Transportation",
+          "description": "Emergency operations centers, airports, metro control, logistics hubs",
+          "image": { "src": "/images/solution-6.jpg", "alt": "An airport control tower with operators monitoring screens." }
+        },
+        {
+          "title": "Retail",
+          "description": "Stores, showrooms, shopping malls, digital signage networks",
+          "image": { "src": "/images/solution-7.jpg", "alt": "A modern retail store with integrated digital signage." }
+        },
+        {
+          "title": "Residential",
+          "description": "Smart homes, luxury villas, apartment complexes",
+          "image": { "src": "/images/solution-8.jpg", "alt": "A smart home living room with an integrated entertainment system." }
+        },
+        {
+          "title": "Houses of Worship",
+          "description": "Mosques, masjids, churches, temples, and chapels",
+          "image": { "src": "/images/service-1.jpg", "alt": "The interior of a modern house of worship with large screens and audio equipment." }
+        },
+        {
+          "title": "Museums & Cultural Centers",
+          "description": "Interactive exhibits, galleries, visitor attractions",
+          "image": { "src": "/images/service-2.jpg", "alt": "An interactive digital exhibit in a modern museum." }
+        },
+        {
+          "title": "Entertainment & Cinema",
+          "description": "Theaters, auditoriums, live performance venues",
+          "image": { "src": "/images/service-3.jpg", "alt": "An empty modern cinema with a large screen and comfortable seating." }
+        },
+        {
+          "title": "Broadcast & Media",
+          "description": "Studios, production control rooms, newsrooms",
+          "image": { "src": "/images/service-4.jpg", "alt": "A professional television broadcast studio control room." }
+        },
+        {
+          "title": "Sports & Recreation",
+          "description": "Stadiums, arenas, fitness centers, event venues",
+          "image": { "src": "/images/service-5.jpg", "alt": "A large, modern sports stadium with large screens." }
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "headline": "Ready to Start Your Project?",
+      "ctaLabel": "Get in Touch",
+      "ctaHref": "/contact"
+    }
+  ]
+}

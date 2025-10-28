@@ -1,5 +1,8 @@
 // src/types/view.ts
-export type ImageView = { src: string; alt?: string; width?: number; height?: number }
+export type ImageView = {
+  src: string
+  alt?: string
+}
 
 export type HeroSection = {
   type: 'hero'
@@ -22,16 +25,20 @@ export type WhoWeAreSection = {
 }
 
 export type ServicesSection = {
-  type: 'services'
-  title?: string
+  type: 'services' | 'services_grid_page'
+  title: string
   items: { title: string; description?: string; icon?: string; image?: ImageView }[]
 }
 
 export type BrandsSection = {
   type: 'brands'
   title?: string
-  categories?: string[]
-  items: { name: string; logo?: ImageView; category?: string; url?: string }[]
+  items: {
+    id: string
+    name: string
+    logo: ImageView
+    url?: string
+  }[]
 }
 
 export type ValuesSection = {
@@ -64,6 +71,51 @@ export type ContactSection = {
   type: 'contact'
 }
 
+export type ContentSection = {
+  type: 'content'
+  body: string
+}
+
+export type SnapshotSection = {
+  type: 'snapshot'
+  title: string
+  metrics: {
+    value: string
+    label: string
+  }[]
+}
+
+export type SectorsGridSection = {
+  type: 'sectors_grid'
+  items: {
+    title: string
+    description: string
+    image: ImageView
+  }[]
+}
+
+export type PartnersShowcaseSection = {
+  type: 'partners_showcase'
+  items: {
+    name: string
+    logo: ImageView
+    description: string
+    features: string[]
+    fit: string
+  }[]
+}
+
+export type SolutionsShowcaseSection = {
+  type: 'solutions_showcase'
+  items: {
+    title: string
+    description: string
+    extended_description?: string
+    image: ImageView
+    features?: string[]
+  }[]
+}
+
 export type SolutionsSection = {
   type: 'solutions'
   title: string
@@ -79,8 +131,13 @@ export type SolutionsSection = {
 export type SectionView =
   | HeroSection
   | WhoWeAreSection
+  | ContentSection
+  | SnapshotSection
   | ServicesSection
+  | SectorsGridSection
+  | PartnersShowcaseSection
   | SolutionsSection
+  | SolutionsShowcaseSection
   | BrandsSection
   | ValuesSection
   | CoverageSection

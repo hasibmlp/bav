@@ -1,23 +1,57 @@
 {
   "slug": "about",
-  "title": "About Us",
+  "title": "About BeAV",
   "sections": [
-    { "type": "hero", "headline": "Who We Are", "subheadline": "A UAE-based, value-add distributor specializing in premium audio-visual solutions. We empower consultants and integrators across the GCC with carefully selected brands and deep technical expertise." },
+    {
+      "type": "hero",
+      "headline": "Driving the Future of Audio-Visual Integration",
+      "subheadline": "We are a passionate team of technology experts dedicated to empowering AV consultants and integrators with premium, reliable solutions and unparalleled project support.",
+      "image": {
+        "src": "/images/about-hero.jpg",
+        "alt": "A professional team collaborating in a modern office environment."
+      }
+    },
+    {
+      "type": "snapshot",
+      "title": "BAV at a Glance",
+      "metrics": [
+        { "value": "15+", "label": "Team Members" },
+        { "value": "50+", "label": "Brands Represented" },
+        { "value": "6", "label": "Countries Covered" },
+        { "value": "500+", "label": "Projects Supported" }
+      ]
+    },
     {
       "type": "values",
       "title": "Our Core Values",
       "items": [
-        { "title": "Integrity & Precision", "icon": "shield", "description": "We uphold the highest standards of honesty and accuracy in every project." },
-        { "title": "Technical Leadership", "icon": "cpu", "description": "Our expertise guides our partners to the best possible AV solutions." },
-        { "title": "Partner Empowerment", "icon": "users", "description": "We provide the tools, training, and support for our partners to succeed." },
-        { "title": "Focused Innovation", "icon": "lightbulb", "description": "We continuously seek out and champion cutting-edge, reliable technologies." },
-        { "title": "Premium Brand Experience", "icon": "gem", "description": "We ensure every interaction reflects the quality of the brands we represent." }
+        {
+          "title": "Expertise",
+          "description": "We are masters of our craft, providing deep technical knowledge and strategic guidance to ensure every project succeeds.",
+          "icon": "briefcase"
+        },
+        {
+          "title": "Partnership",
+          "description": "We build lasting relationships based on trust, transparency, and a shared commitment to excellence.",
+          "icon": "users"
+        },
+        {
+          "title": "Innovation",
+          "description": "We stay at the forefront of AV technology, bringing you cutting-edge solutions that deliver real-world value.",
+          "icon": "cpu"
+        },
+        {
+          "title": "Reliability",
+          "description": "We are your trusted partner, delivering on our promises with unwavering consistency and professional integrity.",
+          "icon": "shield"
+        }
       ]
     },
     {
-      "type": "coverage",
-      "title": "Territory",
-      "regions": ["UAE", "KSA", "Qatar", "Kuwait", "Bahrain", "Oman"]
+      "type": "cta",
+      "headline": "Let's Build the Future of AV Together",
+      "ctaLabel": "Explore Our Solutions",
+      "ctaHref": "/solutions"
     }
   ]
 }

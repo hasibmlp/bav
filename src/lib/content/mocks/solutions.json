@@ -1,0 +1,106 @@
+{
+  "slug": "solutions",
+  "title": "Our Solutions",
+  "sections": [
+    {
+      "type": "hero",
+      "headline": "Our Solutions",
+      "subheadline": "Tailored AV systems for every environment."
+    },
+    {
+      "type": "solutions_showcase",
+      "items": [
+        {
+          "title": "Meeting rooms & Boardrooms",
+          "description": "Transform your meetings into intelligent, connected experiences. Our AV solutions bring clarity, control, and creativity to every discussion — ensuring ideas flow without interruption. Whether it’s a quick huddle or a high-stakes presentation, every participant enjoys premium sound, lifelike visuals, and effortless communication.",
+          "extended_description": "Powered by innovation: AI-driven displays, adaptive soundscapes, and dynamic video walls — all seamlessly integrated through a smart matrix system that places full control right in the palm of your hand.",
+          "image": { "src": "/images/solution-1.jpg", "alt": "Modern boardroom with video conferencing setup" }
+        },
+        {
+          "title": "Hybrid Classrooms & Auditoriums",
+          "description": "Shape the future of learning with intelligent AV environments that connect students and educators anywhere, anytime. Our hybrid classroom solutions foster seamless collaboration through crystal-clear audio, interactive displays, and real-time engagement tools — ensuring lessons remain impactful, inclusive, and dynamic, whether in-person or remote.",
+          "extended_description": "From corporate conferences to cultural events, our auditorium solutions deliver immersive sound, stunning visuals, and effortless control for large-scale experiences. Designed for versatility and performance, each setup combines precision acoustics, high-lumen projection, and centralized automation — creating spaces that captivate audiences and elevate every presentation. Powered by technology: AI-enhanced audio calibration, intelligent camera tracking, and synchronized lighting — all unified through an advanced control matrix that puts every function at your fingertips.",
+          "image": { "src": "/images/solution-2.jpg", "alt": "Modern auditorium with large projection screen" }
+        },
+        {
+          "title": "Command & Control Centers",
+          "description": "Our Command & Control Center solutions empower organizations to monitor, manage, and respond to critical operations in real-time across multiple sectors. From public safety and emergency services to transportation, logistics, utilities, corporate security, healthcare, hospitality, and houses of worship, these centers provide centralized oversight and situational awareness. Whether it’s coordinating emergency responses, managing facilities, monitoring operations, or ensuring guest and visitor safety, our solutions deliver reliable, efficient, and intelligent control for any environment.",
+          "image": { "src": "/images/solution-3.jpg", "alt": "Command center with multiple large screens showing data" },
+          "features": [
+            "Real-time monitoring with high-definition video walls and dashboards",
+            "Integrated communication systems for instant collaboration",
+            "Centralized data management and analytics",
+            "Scalable layouts to support multiple operations and sectors",
+            "Redundancy and fail-safe mechanisms for uninterrupted operations",
+            "Advanced alerting and decision-support tools for rapid action"
+          ]
+        },
+        {
+          "title": "Workplace Management",
+          "description": "Optimize productivity, enhance collaboration, and create smarter work environments with our Workplace Management solutions. Designed for modern offices, corporate campuses, co-working spaces, and hybrid setups, our systems streamline scheduling, resource allocation, and facility management. From meeting room bookings and desk reservations to space utilization analytics and employee experience enhancements, our solutions make workplaces more efficient, connected, and responsive to the needs of every team member.",
+          "image": { "src": "/images/solution-4.jpg", "alt": "Office worker using a digital kiosk for booking a desk" },
+          "features": [
+            "Smart desk and meeting room booking systems",
+            "Real-time space utilization monitoring",
+            "Integrated facility and resource management",
+            "Occupancy analytics and reporting",
+            "Visitor management and access control",
+            "Seamless integration with communication and productivity tools"
+          ]
+        },
+        {
+          "title": "Visitor Management",
+          "description": "Welcome, track, and manage every visitor with ease and professionalism through our advanced Visitor Management solutions. Designed for organizations across all sectors—including corporate offices, healthcare facilities, educational institutions, hospitality, retail spaces, government buildings, and houses of worship—our systems ensure a seamless, secure, and efficient visitor experience. From registration and check-in to access control and visitor analytics, these solutions enhance security, streamline operations, and leave a positive impression on every guest.",
+          "image": { "src": "/images/solution-5.jpg", "alt": "Visitor checking in at a reception desk using a tablet" },
+          "features": [
+            "Digital visitor registration and self check-in kiosks",
+            "ID verification and badge printing",
+            "Pre-registration and appointment scheduling",
+            "Access control integration for secure entry",
+            "Real-time visitor tracking and notifications",
+            "Detailed visitor logs and reporting"
+          ]
+        },
+        {
+          "title": "Integrated AV for Houses of Worship",
+          "description": "Elevate the spiritual experience with our Integrated AV solutions, designed to deliver crystal-clear audio, immersive visuals, and seamless communication for congregations of all sizes. Whether it’s a church, cathedral, mosque, masjid, temple, or chapel, our systems ensure every sermon, prayer, or community event reaches the audience with clarity and impact. These solutions integrate sound, video, lighting, and live streaming, creating an environment that engages worshippers, enhances participation, and fosters connection.",
+          "image": { "src": "/images/solution-6.jpg", "alt": "Interior of a modern house of worship with screens and speakers" },
+          "features": [
+            "High-quality audio systems for speech, music, and chants",
+            "Professional-grade video displays and projection solutions",
+            "Integrated lighting control to enhance ambiance and focus",
+            "Live streaming and recording for remote participation",
+            "Centralized control for simplified operation",
+            "Scalable solutions for small gatherings to large congregations"
+          ]
+        },
+        {
+          "title": "Retail & Residential Automation",
+          "description": "Reimagine convenience, efficiency, and control with our Retail & Residential Automation solutions. For retail spaces, these systems enhance customer experiences through intelligent lighting, digital signage, background music, and security integration, creating engaging and seamless environments. In residential settings, our automation solutions offer homeowners complete control over lighting, climate, entertainment, security, and smart appliances—making everyday living smarter, safer, and more comfortable. Both sectors benefit from centralized control, energy efficiency, and intuitive operation, transforming spaces into intelligent, responsive environments.",
+          "image": { "src": "/images/solution-7.jpg", "alt": "Smart home interface on a tablet controlling lights" },
+          "features": [
+            "Centralized control of lighting, climate, and entertainment",
+            "Smart security and surveillance integration",
+            "Energy management and automation for efficiency",
+            "Digital signage and customer engagement tools (retail)",
+            "Voice and app-based controls for convenience",
+            "Scalable solutions for single homes to large retail complexes"
+          ]
+        },
+        {
+          "title": "Cinema & Museum Solutions",
+          "description": "Bring stories and exhibits to life with our Cinema & Museum Solutions, designed to deliver immersive audio-visual experiences that captivate audiences. For cinemas, our systems ensure crystal-clear sound, stunning visuals, and synchronized lighting to elevate every screening. In museums, galleries, and cultural centers, our solutions enhance exhibitions with interactive displays, dynamic projections, and engaging multimedia installations—creating memorable experiences for visitors of all ages. These solutions combine technology, design, and storytelling to make every visit impactful and unforgettable.",
+          "image": { "src": "/images/solution-8.jpg", "alt": "Interactive light installation in a modern museum" },
+          "features": [
+            "High-definition audio and video systems for immersive experiences",
+            "Interactive displays and touchscreens for visitor engagement",
+            "Projection mapping and dynamic visual installations",
+            "Centralized control for effortless operation",
+            "Scalable solutions for small theaters to large museums",
+            "Integration with lighting, acoustics, and multimedia content"
+          ]
+        }
+      ]
+    }
+  ]
+}

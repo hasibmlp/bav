@@ -1,5 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { FooterCTA } from './FooterCTA'
+import { useDirection } from '@/context/DirectionProvider'
 
 const footerNav = [
   { href: '/', label: 'Home' },
@@ -12,21 +16,25 @@ const footerNav = [
 ]
 
 export function Footer() {
+  const { direction } = useDirection()
   return (
     <footer
-      className="mt-24 border-t border-teal-700/20"
+      className="mt-24 border-t border-neutral-200/70"
       style={{ backgroundColor: 'var(--color-primary)' }}
+      dir={direction}
     >
-      <div className="mx-auto max-w-6xl px-4 py-24 text-white">
+      <FooterCTA />
+      <hr className="border-t border-white/10 max-w-7xl mx-auto" />
+      <div className="mx-auto max-w-7xl px-4 py-24">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 items-start">
           <div className="sm:col-span-2">
             <Link href="/">
               <Image
                 src="/images/bav-logo.png"
                 alt="BAV Logo"
-                width={120}
-                height={48}
-                className="filter brightness-0 invert"
+                width={140}
+                height={56}
+                className="filter brightness-0 invert h-auto w-auto"
               />
             </Link>
             <div className="mt-2">

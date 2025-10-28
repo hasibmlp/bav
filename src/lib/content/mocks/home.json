@@ -17,7 +17,11 @@
     {
       "type": "who_we_are",
       "headline": "Who We Are",
-      "subheadline": "Empowering AV consultants and integrators with premium, reliable solutions."
+      "subheadline": "Empowering AV consultants and integrators with premium, reliable solutions.",
+      "image": {
+        "src": "/images/who-we-are-deco.jpg",
+        "alt": "A decorative image showing a modern office interior."
+      }
     },
     {
       "type": "solutions",
@@ -67,29 +71,44 @@
       "title": "Brand Portfolio",
       "items": [
         {
+          "id": "1",
           "name": "Brand A",
-          "url": "#",
-          "logo": { "src": "/logos/brand-a.png", "alt": "Brand A" }
+          "logo": {
+            "src": "/logos/bnc-b-1.jpeg",
+            "alt": "Brand A"
+          }
         },
         {
+          "id": "2",
           "name": "Brand B",
-          "url": "#",
-          "logo": { "src": "/logos/brand-b.png", "alt": "Brand B" }
+          "logo": {
+            "src": "/logos/bnc-b-2.jpeg",
+            "alt": "Brand B"
+          }
         },
         {
+          "id": "3",
           "name": "Brand C",
-          "url": "#",
-          "logo": { "src": "/logos/brand-c.png", "alt": "Brand C" }
+          "logo": {
+            "src": "/logos/bnc-b-3.jpeg",
+            "alt": "Brand C"
+          }
         },
         {
+          "id": "4",
           "name": "Brand D",
-          "url": "#",
-          "logo": { "src": "/logos/brand-d.png", "alt": "Brand D" }
+          "logo": {
+            "src": "/logos/bnc-b-4.jpeg",
+            "alt": "Brand D"
+          }
         },
         {
+          "id": "5",
           "name": "Brand E",
-          "url": "#",
-          "logo": { "src": "/logos/brand-e.png", "alt": "Brand E" }
+          "logo": {
+            "src": "/logos/bnc-b-5.jpeg",
+            "alt": "Brand E"
+          }
         }
       ]
     },

@@ -9,7 +9,10 @@ export function WhyUs({ data }: { data: WhyUsSection }) {
           <div>
             {data.title && (
               <header className="mb-4">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-900">
+                <h2
+                  className="font-semibold tracking-tight text-neutral-900"
+                  style={{ fontSize: 'clamp(1.5rem, 1rem + 1.5vw, 2.5rem)' }}
+                >
                   {data.title}
                 </h2>
               </header>
@@ -23,7 +26,10 @@ export function WhyUs({ data }: { data: WhyUsSection }) {
           <div className="grid gap-4 sm:grid-cols-2">
             {data.bullets.map((bullet, i) => (
               <div key={i} className="flex items-start gap-3">
-                <div className="mt-1 h-5 w-5 flex-shrink-0 rounded-full bg-sky-100 grid place-items-center">
+                <div
+                  className="mt-1 h-5 w-5 flex-shrink-0 rounded-full grid place-items-center"
+                  style={{ backgroundColor: 'var(--color-primary-tint)' }}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="14"
@@ -35,6 +41,7 @@ export function WhyUs({ data }: { data: WhyUsSection }) {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     className="text-sky-600"
+                    style={{ color: 'var(--color-primary)' }}
                   >
                     <polyline points="20 6 9 17 4 12" />
                   </svg>

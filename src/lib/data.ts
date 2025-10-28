@@ -1,22 +1,27 @@
 // src/lib/data.ts
-import type { PageView } from "@/types/view";
-import home from "@/lib/content/mocks/home.json";
-import about from "@/lib/content/mocks/about.json";
-import services from "@/lib/content/mocks/services.json";
-import brands from "@/lib/content/mocks/brands.json";
-import whyus from "@/lib/content/mocks/why-us.json";
-import contact from "@/lib/content/mocks/contact.json";
+import home from '@/lib/content/mocks/home.json'
+import about from '@/lib/content/mocks/about.json'
+import services from '@/lib/content/mocks/services.json'
+import contact from '@/lib/content/mocks/contact.json'
+import solutions from '@/lib/content/mocks/solutions.json'
+import sectors from '@/lib/content/mocks/sectors.json'
+import partners from '@/lib/content/mocks/partners.json'
+import type { PageView, SectionView } from '@/types/view'
 
 const pages: Record<string, PageView> = {
-  "": home as PageView, // home at '/'
+  home: home as PageView,
   about: about as PageView,
   services: services as PageView,
-  brands: brands as PageView,
-  "why-us": whyus as PageView,
   contact: contact as PageView,
-};
+  solutions: solutions as PageView,
+  sectors: sectors as PageView,
+  partners: partners as PageView,
+}
 
 export async function getPageBySlug(slug: string): Promise<PageView | null> {
-  const key = slug === "home" || slug === "" ? "" : slug;
-  return pages[key] ?? null;
+  return pages[slug] || null
+}
+
+export async function getAllPages(): Promise<PageView[]> {
+  return Object.values(pages)
 }

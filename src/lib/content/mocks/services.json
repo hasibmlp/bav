@@ -1,50 +1,46 @@
 {
   "slug": "services",
-  "title": "Services",
+  "title": "Our Services",
   "sections": [
     {
       "type": "hero",
       "headline": "Our Services",
-      "subheadline": "Comprehensive solutions for a wide range of AV applications."
+      "subheadline": "An end-to-end partnership, guiding your project from initial concept to long-term success."
     },
     {
-      "type": "services",
-      "title": "Our Services",
+      "type": "services_grid_page",
       "items": [
         {
           "title": "AV System Design & Consulting",
-          "description": "Designing end-to-end audio, video, and collaboration systems tailored to client needs.",
-          "image": { "src": "/images/service-1.jpg", "alt": "AV System Design" }
+          "description": "We provide end-to-end AV system design and consulting services that turn your vision into a fully functional and future-ready solution. Our team collaborates with you from the earliest stages—understanding your needs, space, and objectives—to craft designs that deliver optimal performance and seamless integration. Beyond implementation, we continue to support you through system upgrades, technology alignment, and long-term maintenance planning, ensuring your AV infrastructure evolves with your business and remains reliable for years to come.",
+          "image": {
+            "src": "/images/service-1.jpg",
+            "alt": "An architect reviewing AV system blueprints in a modern office."
+          }
         },
         {
           "title": "Integration & Installation Support",
-          "description": "Assisting integrators with deploying projectors, displays, and control systems.",
-          "image": { "src": "/images/service-2.jpg", "alt": "Integration Support" }
+          "description": "We ensure a seamless transition from design to reality through our expert integration and installation support. Our team manages every aspect of setup—from equipment installation and system calibration to on-site configuration—ensuring your AV solutions perform flawlessly. We work closely with your team and project partners to maintain timelines, uphold quality standards, and deliver a fully integrated system that’s ready for use. Even after installation, we provide continued support and fine-tuning to guarantee lasting performance and reliability.",
+          "image": {
+            "src": "/images/service-2.jpg",
+            "alt": "Technicians carefully installing a large video wall."
+          }
         },
         {
-          "title": "Collaboration & Workplace Solutions",
-          "description": "Building modern workplaces with video conferencing, digital whiteboards, and room booking.",
-          "image": { "src": "/images/service-3.jpg", "alt": "Workplace Solutions" }
-        },
-        {
-          "title": "Content Creation & Streaming",
-          "description": "Providing professional tools for live streaming, enterprise broadcast, and content capture.",
-          "image": { "src": "/images/service-4.jpg", "alt": "Streaming Solutions" }
-        },
-        {
-          "title": "Immersive & Experiential Technology",
-          "description": "Delivering AR/VR/XR and simulation solutions using advanced 360° cameras.",
-          "image": { "src": "/images/service-5.jpg", "alt": "Immersive Technology" }
-        },
-        {
-          "title": "Premium Audio Experiences",
-          "description": "Designing sound solutions for boardrooms, auditoriums, and houses of worship.",
-          "image": { "src": "/images/service-6.jpg", "alt": "Audio Experiences" }
+          "title": "Logistics & Supply Chain",
+          "description": "We provide efficient and reliable logistics and supply chain support to ensure your AV projects are delivered on time and in perfect condition. From sourcing and procurement to warehousing and transportation, our team manages every step with precision and transparency. We coordinate directly with vendors, distributors, and installation teams to streamline delivery schedules and reduce downtime. Even after deployment, we assist with inventory management, replacements, and future equipment needs—ensuring a smooth and uninterrupted project flow from start to finish.",
+          "image": {
+            "src": "/images/service-3.jpg",
+            "alt": "A clean and organized warehouse with AV equipment ready for shipping."
+          }
         },
         {
           "title": "After-Sales & Technical Support",
-          "description": "Offering localized support, training, and troubleshooting for our partners and clients.",
-          "image": { "src": "/images/service-7.jpg", "alt": "Technical Support" }
+          "description": "Our commitment doesn’t end with installation—we continue to stand by you with dedicated after-sales and technical support. From system troubleshooting and software updates to performance optimization and training, our team ensures your AV solutions operate at their best long after project completion. We offer responsive assistance, remote guidance, and on-site support when needed, giving you peace of mind and uninterrupted system performance. With our proactive maintenance and long-term service approach, we make sure your investment remains reliable, up-to-date, and ready for the future.",
+          "image": {
+            "src": "/images/service-4.jpg",
+            "alt": "A friendly support technician assisting a client with a control panel."
+          }
         }
       ]
     }

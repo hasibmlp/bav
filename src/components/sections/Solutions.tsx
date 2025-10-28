@@ -1,36 +1,51 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import type { SolutionsSection } from '@/types/view'
 import Image from 'next/image'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import type { Swiper as SwiperInstance } from 'swiper'
-import { Autoplay, A11y } from 'swiper/modules'
+import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react'
+import { Navigation, A11y, Autoplay } from 'swiper/modules'
 import 'swiper/css'
-import { useInView } from '@/lib/hooks'
+import 'swiper/css/navigation'
+import { useInView } from 'react-intersection-observer'
+import { useDirection } from '@/context/DirectionProvider'
 
 export function Solutions({ data }: { data: SolutionsSection }) {
-  const [swiper, setSwiper] = useState<SwiperInstance | null>(null)
-  const [ref, inView] = useInView()
+  const swiperRef = useRef<SwiperClass | null>(null)
+  const { direction } = useDirection()
+  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true })
+  const [swiper, setSwiper] = useState<SwiperClass | null>(null)
 
   useEffect(() => {
+    const swiperInstance = swiperRef.current
     if (inView) {
-      swiper?.autoplay.start()
+      swiperInstance?.autoplay.start()
     } else {
-      swiper?.autoplay.stop()
+      swiperInstance?.autoplay.stop()
     }
-  }, [inView, swiper])
+  }, [inView])
 
   return (
     <section ref={ref} className="py-20 md:py-28">
-      <div className="mx-auto px-4">
+      <div className="mx-auto max-w-7xl px-4">
         <header className="mb-8 md:mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{data.title}</h2>
+          <h2
+            className="font-bold tracking-tight text-neutral-900"
+            style={{ fontSize: 'clamp(2rem, 1.5rem + 2vw, 3.5rem)' }}
+          >
+            {data.title}
+          </h2>
           {data.description && <p className="mt-2 text-lg text-neutral-600">{data.description}</p>}
         </header>
         <div className={`min-h-[700px] transition-opacity duration-500 ${swiper ? 'opacity-100' : 'opacity-0'}`}>
           <Swiper
-            modules={[Autoplay, A11y]}
+            ref={(node) => {
+              if (node) swiperRef.current = node.swiper
+            }}
+            key={direction}
+            dir={direction}
+            modules={[Navigation, A11y, Autoplay]}
+            navigation={{ nextEl: '.next-solution', prevEl: '.prev-solution' }}
             loop
             autoplay={{ delay: 4000, disableOnInteraction: false, stopOnLastSlide: true }}
             slidesPerView={1}
@@ -41,7 +56,7 @@ export function Solutions({ data }: { data: SolutionsSection }) {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
-            className="!pb-12"
+            className="!p-1"
           >
             {data.items.map((item, i) => (
               <SwiperSlide
@@ -73,7 +88,12 @@ export function Solutions({ data }: { data: SolutionsSection }) {
                           isActive ? 'translate-y-0' : 'translate-y-full'
                         }`}
                       >
-                        <h3 className="text-3xl font-bold text-white">{item.title}</h3>
+                        <h3
+                          className="font-bold text-white"
+                          style={{ fontSize: 'clamp(1.5rem, 1rem + 1.5vw, 2.5rem)' }}
+                        >
+                          {item.title}
+                        </h3>
                         <p className="mt-8 text-base text-neutral-200">{item.description}</p>
                         {item.audience && (
                           <p className="mt-4 text-sm text-neutral-300">{item.audience}</p>

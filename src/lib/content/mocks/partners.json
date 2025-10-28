@@ -1,0 +1,78 @@
+{
+  "slug": "partners",
+  "title": "Our Partners",
+  "sections": [
+    {
+      "type": "hero",
+      "headline": "Our Partners",
+      "subheadline": "Collaborating with the industry's leading brands to deliver excellence."
+    },
+    {
+      "type": "partners_showcase",
+      "items": [
+        {
+          "name": "Canon",
+          "logo": { "src": "/logos/brand-a.png", "alt": "Canon Logo" },
+          "description": "Canon is a global leader in imaging solutions, offering world-class cameras, projectors, and visual communication tools trusted by professionals worldwide.",
+          "features": [
+            "High-performance projectors with superior color accuracy",
+            "Advanced camera technology for crystal-clear visuals",
+            "Reliable imaging solutions for corporate and educational setups"
+          ],
+          "fit": "Canon’s expertise in precision imaging perfectly complements Be Av’s mission to deliver sharp, vibrant, and impactful visual solutions for every environment."
+        },
+        {
+          "name": "Crestron",
+          "logo": { "src": "/logos/brand-b.png", "alt": "Crestron Logo" },
+          "description": "Crestron stands at the forefront of automation and control systems, transforming how people connect and collaborate through smart technology.",
+          "features": [
+            "Seamless AV and lighting control systems",
+            "Integrated meeting room and presentation solutions",
+            "Scalable automation for residential and commercial use"
+          ],
+          "fit": "Crestron’s intelligent control systems empower Be Av to create fully integrated environments — enhancing functionality, connectivity, and user experience across all AV projects."
+        },
+        {
+          "name": "Insta360",
+          "logo": { "src": "/logos/brand-c.png", "alt": "Insta360 Logo" },
+          "description": "Insta360 redefines visual storytelling with its innovative 360° and action cameras that capture immersive, high-resolution content from every angle.",
+          "features": [
+            "360° capture and AI-powered editing tools",
+            "Compact and versatile camera design",
+            "High-quality output ideal for events, media, and corporate use"
+          ],
+          "fit": "As the AV industry embraces immersive experiences, Insta360 aligns perfectly with Be Av’s commitment to bringing next-generation imaging solutions to clients who demand creativity and innovation."
+        },
+        {
+          "name": "ViewSonic",
+          "logo": { "src": "/logos/brand-d.png", "alt": "ViewSonic Logo" },
+          "description": "ViewSonic is a global provider of visual display technology, offering a comprehensive range of monitors, projectors, and digital signage solutions.",
+          "features": [
+            "High-definition displays with industry-leading color accuracy",
+            "Interactive flat panels for education and business",
+            "Robust digital signage systems for retail and hospitality"
+          ],
+          "fit": "ViewSonic’s reliable and innovative display solutions strengthen Be Av’s portfolio in delivering exceptional visual performance for diverse applications."
+        },
+        {
+          "name": "Devialet",
+          "logo": { "src": "/logos/brand-e.png", "alt": "Devialet Logo" },
+          "description": "Devialet is a French audio technology brand renowned for combining luxury design with revolutionary acoustic engineering.",
+          "features": [
+            "Patented audio amplification technology",
+            "High-fidelity sound systems with elegant aesthetics",
+            "Immersive and powerful audio experience"
+          ],
+          "fit": "With Devialet, Be Av enhances its offerings in premium sound integration — providing clients with audio systems that deliver both design excellence and unmatched performance."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "headline": "Become a Partner",
+      "subheadline": "Interested in joining our ecosystem of leading technology brands? We're always looking for innovative partners to collaborate with.",
+      "ctaLabel": "Contact Us",
+      "ctaHref": "/contact"
+    }
+  ]
+}
