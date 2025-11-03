@@ -1,24 +1,20 @@
 {
   "slug": "about",
-  "title": "About BeAV",
+  "title": "About Be an AV Pioneer",
   "sections": [
     {
       "type": "hero",
-      "headline": "Driving the Future of Audio-Visual Integration",
-      "subheadline": "We are a passionate team of technology experts dedicated to empowering AV consultants and integrators with premium, reliable solutions and unparalleled project support.",
-      "image": {
-        "src": "/images/about-hero.jpg",
-        "alt": "A professional team collaborating in a modern office environment."
-      }
+      "headline": "We Are the Future of AV Distribution",
+      "subheadline": "Be an AV Pioneer is a forward-thinking, value-added distributor committed to empowering AV consultants and integrators with premium, reliable solutions. We believe in building strong partnerships based on trust, expertise, and a shared passion for innovation."
     },
     {
       "type": "snapshot",
-      "title": "BAV at a Glance",
+      "title": "Our Journey So Far",
       "metrics": [
-        { "value": "15+", "label": "Team Members" },
-        { "value": "5+", "label": "Brands Represented" },
-        { "value": "6", "label": "Countries Covered" },
-        { "value": "500+", "label": "Projects Supported" }
+        { "value": "50+", "label": "Projects Supported" },
+        { "value": "6", "label": "GCC Countries Covered" },
+        { "value": "10+", "label": "Years of Combined Experience" },
+        { "value": "5", "label": "Exclusive Brand Partnerships" }
       ]
     },
     {
@@ -26,32 +22,33 @@
       "title": "Our Core Values",
       "items": [
         {
-          "title": "Expertise",
-          "description": "We are masters of our craft, providing deep technical knowledge and strategic guidance to ensure every project succeeds.",
-          "icon": "briefcase"
-        },
-        {
-          "title": "Partnership",
-          "description": "We build lasting relationships based on trust, transparency, and a shared commitment to excellence.",
-          "icon": "users"
-        },
-        {
-          "title": "Innovation",
-          "description": "We stay at the forefront of AV technology, bringing you cutting-edge solutions that deliver real-world value.",
-          "icon": "cpu"
-        },
-        {
+          "icon": "shield",
           "title": "Reliability",
-          "description": "We are your trusted partner, delivering on our promises with unwavering consistency and professional integrity.",
-          "icon": "shield"
+          "description": "We stand by our products and partners, ensuring quality and dependability in every project."
+        },
+        {
+          "icon": "bar-chart-2",
+          "title": "Value-Add",
+          "description": "We go beyond distribution, providing deep expertise and support to add tangible value."
+        },
+        {
+          "icon": "users",
+          "title": "Partnership",
+          "description": "We build lasting relationships with our clients, fostering collaboration and mutual growth."
+        },
+        {
+          "icon": "trending-up",
+          "title": "Innovation",
+          "description": "We are dedicated to bringing the latest and most effective AV technologies to the forefront."
         }
       ]
     },
     {
       "type": "cta",
       "headline": "Let's Build the Future of AV Together",
-      "ctaLabel": "Explore Our Solutions",
-      "ctaHref": "/solutions"
+      "ctaLabel": "Get in Touch",
+      "ctaHref": "/contact"
     }
   ]
 }
+

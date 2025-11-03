@@ -4,8 +4,8 @@
   "sections": [
     {
       "type": "hero",
-      "headline": "Our Services",
-      "subheadline": "An end-to-end partnership, guiding your project from initial concept to long-term success."
+      "headline": "Comprehensive Support for Your AV Projects",
+      "subheadline": "From initial design and consulting to logistics and after-sales support, we provide a full spectrum of services to ensure your projects are a success."
     },
     {
       "type": "services_grid_page",
@@ -14,7 +14,7 @@
           "title": "AV System Design & Consulting",
           "description": "We provide end-to-end AV system design and consulting services that turn your vision into a fully functional and future-ready solution. Our team collaborates with you from the earliest stages—understanding your needs, space, and objectives—to craft designs that deliver optimal performance and seamless integration. Beyond implementation, we continue to support you through system upgrades, technology alignment, and long-term maintenance planning, ensuring your AV infrastructure evolves with your business and remains reliable for years to come.",
           "image": {
-            "src": "/images/service-1.jpg",
+            "src": "/images/services/bnc-serv-design.jpeg",
             "alt": "An architect reviewing AV system blueprints in a modern office."
           }
         },
@@ -22,7 +22,7 @@
           "title": "Integration & Installation Support",
           "description": "We ensure a seamless transition from design to reality through our expert integration and installation support. Our team manages every aspect of setup—from equipment installation and system calibration to on-site configuration—ensuring your AV solutions perform flawlessly. We work closely with your team and project partners to maintain timelines, uphold quality standards, and deliver a fully integrated system that’s ready for use. Even after installation, we provide continued support and fine-tuning to guarantee lasting performance and reliability.",
           "image": {
-            "src": "/images/service-2.jpg",
+            "src": "/images/services/bnc-serv-integration.jpeg",
             "alt": "Technicians carefully installing a large video wall."
           }
         },
@@ -30,7 +30,7 @@
           "title": "Logistics & Supply Chain",
           "description": "We provide efficient and reliable logistics and supply chain support to ensure your AV projects are delivered on time and in perfect condition. From sourcing and procurement to warehousing and transportation, our team manages every step with precision and transparency. We coordinate directly with vendors, distributors, and installation teams to streamline delivery schedules and reduce downtime. Even after deployment, we assist with inventory management, replacements, and future equipment needs—ensuring a smooth and uninterrupted project flow from start to finish.",
           "image": {
-            "src": "/images/service-3.jpg",
+            "src": "/images/services/bnc-serv-logistics.jpeg",
             "alt": "A clean and organized warehouse with AV equipment ready for shipping."
           }
         },
@@ -38,7 +38,7 @@
           "title": "After-Sales & Technical Support",
           "description": "Our commitment doesn’t end with installation—we continue to stand by you with dedicated after-sales and technical support. From system troubleshooting and software updates to performance optimization and training, our team ensures your AV solutions operate at their best long after project completion. We offer responsive assistance, remote guidance, and on-site support when needed, giving you peace of mind and uninterrupted system performance. With our proactive maintenance and long-term service approach, we make sure your investment remains reliable, up-to-date, and ready for the future.",
           "image": {
-            "src": "/images/service-4.jpg",
+            "src": "/images/services/bnc-serv-sales.jpeg",
             "alt": "A friendly support technician assisting a client with a control panel."
           }
         }

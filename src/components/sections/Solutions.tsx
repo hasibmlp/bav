@@ -22,7 +22,7 @@ export function Solutions({ data }: { data: SolutionsSection }) {
       swiperInstance?.autoplay.start()
     } else {
       swiperInstance?.autoplay.stop()
-    }
+  }
   }, [inView])
 
   return (

@@ -1,28 +1,24 @@
 // src/app/(site)/contact/page.tsx
-import { getPageBySlug } from '@/lib/data'
-import { ContactForm } from '@/components/forms/ContactForm'
 import { PageHero } from '@/components/sections/PageHero'
-import type { SectionView } from '@/types/view'
+import { ContactForm } from '@/components/sections/ContactForm'
+import type { HeroSection } from '@/types/view'
 
-export default async function Page() {
-  const page = await getPageBySlug('contact')
-  if (!page) return null
+const staticHeroData: HeroSection = {
+  type: 'hero',
+  headline: 'Get in Touch',
+  subheadline:
+    "We're here to help with any questions you may have about our products, services, or partnerships. Reach out to us, and let's start a conversation.",
+}
 
+export default function Page() {
   return (
     <>
-      {page.sections.map((s, i) => {
-        if (s.type === 'hero') return <PageHero key={i} data={s} />
-        if (s.type === 'contact') {
-          return (
-            <section key={i} className="py-20 md:py-28">
-              <div className="mx-auto max-w-2xl px-4">
-                <ContactForm />
-              </div>
-            </section>
-          )
-        }
-        return null
-      })}
+      <PageHero data={staticHeroData} />
+      <section className="py-20 md:py-28">
+        <div className="mx-auto max-w-2xl px-4">
+          <ContactForm />
+        </div>
+      </section>
     </>
   )
 }

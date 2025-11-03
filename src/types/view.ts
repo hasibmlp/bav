@@ -2,6 +2,7 @@
 export type ImageView = {
   src: string
   alt?: string
+  contentType?: string
 }
 
 export type HeroSection = {

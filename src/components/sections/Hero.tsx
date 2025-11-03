@@ -1,20 +1,35 @@
 import type { HeroSection } from '@/types/view'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export function Hero({ data }: { data: HeroSection }) {
+  const isVideo = data.image?.contentType?.startsWith('video')
+
   return (
     <section className="relative h-screen max-h-[900px] flex items-center justify-center text-center text-white overflow-hidden">
-      <video
-        src="/videos/bav-hero-video.MP4"
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      />
+      {isVideo && data.image ? (
+        <video
+          src={data.image.src}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+      ) : (
+        data.image && (
+          <Image
+            src={data.image.src}
+            alt={data.image.alt || 'Hero background'}
+            fill
+            priority
+            className="object-cover"
+          />
+        )
+      )}
       <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
       <div className="relative z-20 mx-auto max-w-6xl px-4 flex flex-col items-center justify-center">
-        {data.eyebrow && (
+        {data.eyebrow && (  
           <p className="mb-3 text-sm font-medium tracking-wide text-sky-300/90">{data.eyebrow}</p>
         )}
         <h1

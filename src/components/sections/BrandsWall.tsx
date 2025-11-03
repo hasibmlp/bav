@@ -29,6 +29,18 @@ export function BrandsWall({ data }: { data: BrandsSection }) {
 
   return (
     <section className="py-20 md:py-28">
+      {data.title && (
+        <div className="mx-auto max-w-7xl px-4">
+          <header className="mb-8 text-center md:mb-20">
+            <h2
+              className="font-bold tracking-tight text-neutral-900"
+              style={{ fontSize: 'clamp(2rem, 1.5rem + 2vw, 3.5rem)' }}
+            >
+              {data.title}
+            </h2>
+          </header>
+        </div>
+      )}
       {shouldRenderSlider ? (
         <Swiper
           key={direction}
@@ -46,18 +58,18 @@ export function BrandsWall({ data }: { data: BrandsSection }) {
           speed={5000}
           allowTouchMove={false}
           slidesPerView={5}
-          spaceBetween={30}
+          spaceBetween={60}
           breakpoints={{
-            320: { slidesPerView: 2, spaceBetween: 20 },
-            480: { slidesPerView: 3, spaceBetween: 30 },
-            640: { slidesPerView: 4, spaceBetween: 40 },
-            768: { slidesPerView: 6, spaceBetween: 50 },
+            320: { slidesPerView: 2, spaceBetween: 40 },
+            480: { slidesPerView: 3, spaceBetween: 50 },
+            640: { slidesPerView: 4, spaceBetween: 60 },
+            768: { slidesPerView: 6, spaceBetween: 80 },
           }}
           className="swiper-brands min-h-[50px]"
         >
           {data.items.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="flex h-16 w-32 items-center justify-center md:h-20 md:w-40 lg:h-24 lg:w-48">
+              <div className="flex h-12 w-32 items-center justify-center md:h-16 md:w-40 lg:h-16 lg:w-48">
                 <Image
                   src={item.logo.src}
                   alt={item.logo.alt || item.name}
@@ -70,11 +82,11 @@ export function BrandsWall({ data }: { data: BrandsSection }) {
           ))}
         </Swiper>
       ) : (
-        <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-center gap-x-12 gap-y-8 px-4">
+        <div className="flex w-full flex-wrap items-center justify-center gap-x-24 gap-y-12 px-4">
           {data.items.map((item) => (
             <div
               key={item.id}
-              className="flex h-16 w-32 items-center justify-center md:h-20 md:w-40 lg:h-24 lg:w-48"
+              className="flex h-12 w-32 items-center justify-center md:h-16 md:w-40 lg:h-16 lg:w-48"
             >
               <Image
                 src={item.logo.src}

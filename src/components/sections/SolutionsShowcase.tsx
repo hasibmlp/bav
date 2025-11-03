@@ -54,21 +54,32 @@ export function SolutionsShowcase({ data }: { data: SolutionsShowcaseSection }) 
               key={index}
               className="overflow-hidden rounded-lg shadow-sm transition-all duration-300"
               style={{
-                backgroundColor: openIndex === index ? '#FFFFFF' : '#F8F9FA',
+                backgroundColor: openIndex === index ? '#FFFFFF' : 'var(--color-primary)',
               }}
             >
               <button
                 onClick={() => handleToggle(index)}
-                className="flex w-full items-center justify-between p-6 text-left hover:bg-neutral-50/50"
+                className={`flex w-full items-center justify-between p-6 text-left transition-colors ${
+                  openIndex === index ? 'hover:bg-neutral-50/50' : 'hover:bg-white/10'
+                }`}
               >
-                <h3 className="text-xl font-semibold text-neutral-800 md:text-2xl">
+                <h3
+                  className={`text-xl font-semibold md:text-2xl ${
+                    openIndex === index ? 'text-neutral-800' : 'text-white'
+                  }`}
+                >
                   {item.title}
                 </h3>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <FeatherIcon name="chevron-down" className="h-6 w-6 text-neutral-500" />
+                  <FeatherIcon
+                    name="chevron-down"
+                    className={`h-6 w-6 ${
+                      openIndex === index ? 'text-neutral-500' : 'text-white'
+                    }`}
+                  />
                 </motion.div>
               </button>
               <AnimatePresence initial={false}>

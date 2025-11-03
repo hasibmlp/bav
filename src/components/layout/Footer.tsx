@@ -5,14 +5,16 @@ import Image from 'next/image'
 import { FooterCTA } from './FooterCTA'
 import { useDirection } from '@/context/DirectionProvider'
 
-const footerNav = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
+const mainNav = [
+  { href: '/solutions', label: 'Solutions' },
   { href: '/services', label: 'Services' },
-  { href: '/brands', label: 'Brands' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/privacy', label: 'Privacy Policy' },
-  { href: '/terms', label: 'Terms of Use' },
+  { href: '/sectors', label: 'Sectors' },
+]
+
+const companyNav = [
+  { href: '/partners', label: 'Partners' },
+  { href: '/about', label: 'About BAV' },
+  { href: '/contact', label: 'Contact Us' },
 ]
 
 export function Footer() {
@@ -43,15 +45,15 @@ export function Footer() {
           </div>
           <div className="grid gap-2">
             <h3 className="text-lg font-medium text-white">Navigation</h3>
-            {footerNav.slice(0, 5).map((item) => (
+            {mainNav.map((item) => (
               <Link key={item.href} href={item.href} className="text-base text-white hover:opacity-80">
                 {item.label}
               </Link>
             ))}
           </div>
           <div className="grid gap-2">
-            <h3 className="text-lg font-medium text-white">Legal</h3>
-            {footerNav.slice(5).map((item) => (
+            <h3 className="text-lg font-medium text-white">Company</h3>
+            {companyNav.map((item) => (
               <Link key={item.href} href={item.href} className="text-base text-white hover:opacity-80">
                 {item.label}
               </Link>

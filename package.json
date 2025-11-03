@@ -10,6 +10,7 @@
   "dependencies": {
     "@react-spring/web": "^10.0.3",
     "cobe": "^0.6.5",
+    "contentful": "^11.8.9",
     "feather-icons": "^4.29.2",
     "framer-motion": "^12.23.24",
     "next": "15.5.3",
@@ -24,6 +25,9 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "contentful-management": "^11.62.0",
+    "dotenv": "^17.2.3",
+    "mime-types": "^3.0.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

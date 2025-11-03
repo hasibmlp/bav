@@ -55,8 +55,8 @@ export function Coverage({ data }: { data: CoverageSection }) {
           </div>
           <div className="relative aspect-[4/3] w-full">
             <Image
-              src="/images/gcc-map.png"
-              alt="Map of the GCC region"
+              src="/images/territory/bnc-territory.png"
+              alt="Map of the territory coverage"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-contain"

@@ -4,15 +4,16 @@
   "sections": [
     {
       "type": "hero",
-      "eyebrow": "Brilliance. Accuracy. Vantage.",
-      "headline": "Premium AV Distribution for Consultants & Integrators",
-      "subheadline": "UAE-based, GCC coverage, project-driven technical support.",
-      "ctaLabel": "Explore",
-      "ctaHref": "#services",
-      "image": {
-        "src": "/images/bav-hero.jpg",
-        "alt": "Hero Image"
-      }
+      "eyebrow": "Be an AV pioneer",
+      "headline": "Your Project-Driven AV Partner in GCC",
+      "subheadline": "We provide value-added audiovisual distribution and project support across the Gulf region, delivering innovative solutions tailored to your needs.",
+      "video": {
+        "src": "/videos/bav-hero-video.mp4"
+      },
+      "cta": [
+        { "label": "Explore", "href": "/solutions" },
+        { "label": "Contact Us", "href": "/contact" }
+      ]
     },
     {
       "type": "who_we_are",
@@ -29,85 +30,89 @@
       "description": "Tailored AV systems for every environment.",
       "items": [
         {
-          "title": "Smart Meeting & Collaboration Spaces",
-          "description": "Modern conference rooms with smart scheduling, touch displays, and seamless integration with Microsoft Teams, Zoom, Webex, and Google Meet.",
-          "audience": "Designed for consultants, corporates, and integrators who want reliable, easy-to-use solutions.",
-          "image": { "src": "/images/solution-1.jpg", "alt": "Smart Meeting Room" }
+          "title": "Meeting rooms & Boardrooms",
+          "description": "Transform your meetings into intelligent, connected experiences. Our AV solutions bring clarity, control, and creativity to every discussion — ensuring ideas flow without interruption.",
+          "image": { "src": "/images/solutions/bnc-s-meeting.jpeg", "alt": "Smart Meeting Room" }
         },
         {
-          "title": "Learning & Training Environments",
-          "description": "Interactive classrooms and hybrid learning setups with digital whiteboards, immersive cameras, and high-quality sound.",
-          "audience": "Suitable for schools, universities, auditoriums, and training centers.",
-          "image": { "src": "/images/solution-2.jpg", "alt": "Hybrid Classroom" }
-        },
-        {
-          "title": "Houses of Worship & Auditoriums",
-          "description": "Crystal-clear sound, large-format projection, and streaming tools to reach audiences both onsite and online.",
-          "audience": "Tailored audio and video systems designed to enhance the worship or event experience.",
-          "image": { "src": "/images/solution-3.jpg", "alt": "Auditorium" }
+          "title": "Hybrid Classrooms & Auditoriums",
+          "description": "Shape the future of learning with intelligent AV environments that connect students and educators anywhere, anytime. Our hybrid classroom solutions foster seamless collaboration through crystal-clear audio, interactive displays, and real-time engagement tools.",
+          "image": { "src": "/images/solutions/bnc-s-hybrid-classrooms.jpeg", "alt": "Hybrid Classroom" }
         },
         {
           "title": "Command & Control Centers",
-          "description": "Large video walls, real-time streaming, and secure monitoring systems.",
-          "audience": "Built for government, enterprise, and critical operations that demand reliability and clarity.",
-          "image": { "src": "/images/solution-4.jpg", "alt": "Command Center" }
+          "description": "Our Command & Control Center solutions empower organizations to monitor, manage, and respond to critical operations in real-time across multiple sectors.",
+          "image": { "src": "/images/solutions/bnc-s-command-control .jpeg", "alt": "Command Center" }
         },
         {
-          "title": "Immersive Experience Technology",
-          "description": "AR/VR/XR, simulation, and 360° video solutions for training, creative production, and experiential marketing.",
-          "audience": "Perfect for enterprises, content creators, and innovation hubs.",
-          "image": { "src": "/images/solution-5.jpg", "alt": "VR Experience" }
+          "title": "Workplace Management",
+          "description": "Optimize productivity, enhance collaboration, and create smarter work environments with our Workplace Management solutions.",
+          "image": { "src": "/images/solutions/bnc-s-workspace.jpeg", "alt": "Workplace Management" }
         },
         {
-          "title": "Media & Enterprise Broadcast",
-          "description": "Professional cameras, high-fidelity audio, and streaming systems for live events, corporate communication, and online broadcasting.",
-          "audience": "Ensures professional-quality visuals and sound every time.",
-          "image": { "src": "/images/solution-6.jpg", "alt": "Broadcast Studio" }
+          "title": "Visitor Management",
+          "description": "Welcome, track, and manage every visitor with ease and professionalism through our advanced Visitor Management solutions.",
+          "image": { "src": "/images/solutions/bnc-s-visitor.jpeg", "alt": "Visitor Management" }
+        },
+        {
+          "title": "Integrated AV for Houses of Worship",
+          "description": "Elevate the spiritual experience with our Integrated AV solutions, designed to deliver crystal-clear audio, immersive visuals, and seamless communication for congregations of all sizes.",
+          "image": { "src": "/images/solutions/bnc-s-worship.jpeg", "alt": "Houses of Worship" }
+        },
+        {
+          "title": "Retail & Residential Automation",
+          "description": "Reimagine convenience, efficiency, and control with our Retail & Residential Automation solutions.",
+          "image": { "src": "/images/solutions/bnc-s-retail.jpeg", "alt": "Retail & Residential Automation" }
+        },
+        {
+          "title": "Cinema & Museum Solutions",
+          "description": "Bring stories and exhibits to life with our Cinema & Museum Solutions, designed to deliver immersive audio-visual experiences that captivate audiences.",
+          "image": { "src": "/images/solutions/bnc-s-cinema.jpeg", "alt": "Cinema & Museum Solutions" }
         }
       ]
     },
     {
       "type": "brands",
-      "title": "Brand Portfolio",
+      "title": "Our Partners",
       "items": [
         {
           "id": "1",
-          "name": "Brand A",
+          "name": "Canon",
           "logo": {
-            "src": "/logos/bnc-b-1.jpeg",
-            "alt": "Brand A"
+            "src": "/images/partners/bnc-canon.jpeg",
+            "alt": "Canon"
           }
         },
         {
           "id": "2",
-          "name": "Brand B",
+          "name": "Crestron",
           "logo": {
-            "src": "/logos/bnc-b-2.jpeg",
-            "alt": "Brand B"
+            "src": "/images/partners/bnc-crestron.jpeg",
+            "alt": "Crestron"
           }
         },
         {
           "id": "3",
-          "name": "Brand C",
+          "name": "Devialet",
           "logo": {
-            "src": "/logos/bnc-b-3.jpeg",
-            "alt": "Brand C"
+            "src": "/images/partners/bnc-devialet.jpeg",
+            "alt": "Devialet"
           }
         },
         {
           "id": "4",
-          "name": "Brand D",
+          "name": "Insta360",
           "logo": {
-            "src": "/logos/bnc-b-4.jpeg",
-            "alt": "Brand D"
+            "src": "/images/partners/bnc-insta360.jpeg",
+            "alt": "Insta360"
           }
         },
         {
           "id": "5",
-          "name": "Brand E",
+          "name": "Viewsonic",
           "logo": {
-            "src": "/logos/bnc-b-5.jpeg",
-            "alt": "Brand E"
+            "src": "/images/partners/bnc-viewsonic.jpeg",
+            "alt": "Viewsonic"
           }
         }
       ]
@@ -118,38 +123,23 @@
       "items": [
         {
           "title": "AV System Design & Consulting",
-          "description": "Designing end-to-end audio, video, and collaboration systems tailored to client needs. Helping consultants and integrators choose the right mix of cameras, displays, control systems, and audio solutions.",
-          "image": { "src": "/images/service-1.jpg", "alt": "AV System Design" }
+          "description": "We provide end-to-end AV system design and consulting services that turn your vision into a fully functional and future-ready solution.",
+          "image": { "src": "/images/services/bnc-serv-design.jpeg", "alt": "AV System Design" }
         },
         {
           "title": "Integration & Installation Support",
-          "description": "Assisting integrators with deploying projectors, displays, control systems, and immersive technologies. Ensuring smooth setup in meeting rooms, classrooms, auditoriums, retail, and houses of worship.",
-          "image": { "src": "/images/service-2.jpg", "alt": "Integration Support" }
+          "description": "We ensure a seamless transition from design to reality through our expert integration and installation support.",
+          "image": { "src": "/images/services/bnc-serv-integration.jpeg", "alt": "Integration Support" }
         },
         {
-          "title": "Collaboration & Workplace Solutions",
-          "description": "Building modern workplaces with video conferencing, digital whiteboards, room booking systems, and automation. Enabling hybrid collaboration across Teams, Zoom, Webex, and Google Meet.",
-          "image": { "src": "/images/service-3.jpg", "alt": "Workplace Solutions" }
-        },
-        {
-          "title": "Content Creation & Streaming Solutions",
-          "description": "Providing professional tools for live streaming, enterprise broadcast, and high-quality content capture. Supporting corporate communications, training, events, and education with Canon & Insta360 solutions.",
-          "image": { "src": "/images/service-4.jpg", "alt": "Streaming Solutions" }
-        },
-        {
-          "title": "Immersive & Experiential Technology",
-          "description": "Delivering AR/VR/XR and simulation solutions using advanced 360° cameras and visualization tools. Creating interactive experiences for training, marketing, and innovation hubs.",
-          "image": { "src": "/images/service-5.jpg", "alt": "Immersive Technology" }
-        },
-        {
-          "title": "Premium Audio Experiences",
-          "description": "Designing sound solutions for boardrooms, auditoriums, cinemas, and houses of worship. Ensuring crystal-clear, immersive sound with premium speaker and acoustic technologies.",
-          "image": { "src": "/images/service-6.jpg", "alt": "Audio Experiences" }
+          "title": "Logistics & Supply Chain",
+          "description": "We provide efficient and reliable logistics and supply chain support to ensure your AV projects are delivered on time and in perfect condition.",
+          "image": { "src": "/images/services/bnc-serv-logistics.jpeg", "alt": "Logistics & Supply Chain" }
         },
         {
           "title": "After-Sales & Technical Support",
-          "description": "Offering localized support, training, and troubleshooting for partners and clients. Helping maintain long-term reliability and performance of AV systems.",
-          "image": { "src": "/images/service-7.jpg", "alt": "Technical Support" }
+          "description": "Our commitment doesn’t end with installation—we continue to stand by you with dedicated after-sales and technical support.",
+          "image": { "src": "/images/services/bnc-serv-sales.jpeg", "alt": "After-Sales & Technical Support" }
         }
       ]
     },
