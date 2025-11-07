@@ -1,102 +1,94 @@
 'use client'
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { useEffect } from 'react'
+import { Link, usePathname } from '@/navigation'
 import { LanguageSwitcher } from './LanguageSwitcher'
-
-const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Contact', href: '/contact' },
-]
+import { useTranslations } from 'next-intl'
+import { useEffect } from 'react'
+import type { NavigationLink } from '@/types/view'
+import Image from 'next/image'
 
 export default function MobileNav({
   isOpen,
-  setIsOpen,
+  onClose,
+  navLinks,
 }: {
   isOpen: boolean
-  setIsOpen: (isOpen: boolean) => void
+  onClose: () => void
+  navLinks: NavigationLink[]
 }) {
+  const t = useTranslations('Navigation')
+  const pathname = usePathname()
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'auto'
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+          onClose()
+        }
+      }
+      document.addEventListener('keydown', handleKeyDown)
+      return () => {
+        document.body.style.overflow = ''
+        document.removeEventListener('keydown', handleKeyDown)
+      }
     }
-  }, [isOpen])
+  }, [isOpen, onClose])
 
   return (
     <div
-      className={`fixed inset-0 z-50 transition-transform duration-300 ease-in-out ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      }`}
-      style={{ backgroundColor: 'var(--color-dark)' }}
+      className={`
+        fixed inset-0 z-50 transition-transform duration-300 ease-in-out lg:hidden
+        ${isOpen ? 'translate-x-0' : 'translate-x-full'}
+      `}
     >
-      <div className="flex h-full flex-col p-8">
-        <div className="flex items-center justify-between">
-          <Link href="/" onClick={() => setIsOpen(false)}>
-            <Image
-              src="/images/bav-logo.png"
-              alt="BAV Logo"
-              width={140}
-              height={56}
-              className="h-auto w-auto"
-            />
+      <div className="fixed inset-0 bg-white" />
+      <div className="relative h-full w-full bg-white text-neutral-800">
+        <div className="p-4 flex items-center justify-between border-b">
+          <Link href="/" onClick={onClose}>
+            <Image src="/images/bav-logo.png" alt="BAV Logo" width={100} height={40} />
           </Link>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="p-2 text-white"
-            aria-label="Close menu"
-          >
+          <button onClick={onClose} className="p-2 rounded-md" aria-label="Close navigation menu">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="28"
+              height="28"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="h-6 w-6"
             >
-              <path d="m18 6-12 12" />
-              <path d="m6 6 12 12" />
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </button>
         </div>
-
-        <nav className="mt-12 flex flex-1 flex-col justify-between">
-          <ul className="flex flex-col gap-6 text-2xl font-medium text-white">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <Link
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="no-underline hover:no-underline"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          <div className="border-t border-white/20 pt-8 mt-8">
-            <div className="flex items-center justify-between">
-              <LanguageSwitcher isScrolled={false} />
-              <Link
-                href="/contact"
-                onClick={() => setIsOpen(false)}
-                className="rounded-md bg-white/10 px-4 py-2.5 text-base font-medium text-white no-underline hover:no-underline"
-              >
-                Contact Us
-              </Link>
-            </div>
+        <div className="p-8 flex flex-col gap-8 text-2xl font-medium">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={onClose}
+              className={`transition-colors hover:text-[var(--color-primary)] ${
+                pathname === link.href ? 'text-[var(--color-primary)]' : ''
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="/contact"
+            onClick={onClose}
+            className="hover:text-[var(--color-primary)] transition-colors"
+          >
+            {t('contact')}
+          </Link>
+          <div className="mt-20">
+            <LanguageSwitcher isScrolled={true} />
           </div>
-        </nav>
+        </div>
       </div>
     </div>
   )

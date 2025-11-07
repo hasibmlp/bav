@@ -7,10 +7,8 @@ import 'swiper/css'
 import 'swiper/css/autoplay'
 import type { BrandsSection } from '@/types/view'
 import Image from 'next/image'
-import { useDirection } from '@/context/DirectionProvider'
 
 export function BrandsWall({ data }: { data: BrandsSection }) {
-  const { direction } = useDirection()
   const [isDesktop, setIsDesktop] = useState(false)
 
   useEffect(() => {
@@ -43,8 +41,6 @@ export function BrandsWall({ data }: { data: BrandsSection }) {
       )}
       {shouldRenderSlider ? (
         <Swiper
-          key={direction}
-          dir={direction}
           modules={[Autoplay, A11y]}
           loop={canAutoplay}
           autoplay={

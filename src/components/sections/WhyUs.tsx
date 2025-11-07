@@ -17,10 +17,9 @@ export function WhyUs({ data }: { data: WhyUsSection }) {
                 </h2>
               </header>
             )}
-            <p className="text-neutral-700">
-              We provide more than just products; we deliver performance, reliability, and a partnership
-              built on deep technical expertise.
-            </p>
+            {data.description && (
+              <p className="text-neutral-700">{data.description}</p>
+            )}
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">

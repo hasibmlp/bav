@@ -8,12 +8,12 @@ import type { ServicesSection } from '@/types/view'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import Image from 'next/image'
-import Link from 'next/link'
-import { useDirection } from '@/context/DirectionProvider'
+import { Link } from '@/navigation' // Using next-intl Link to preserve locale
+import { useTranslations } from 'next-intl'
 
 export function ServicesGrid({ data }: { data: ServicesSection }) {
   const [swiper, setSwiper] = useState<SwiperInstance | null>(null)
-  const { direction } = useDirection()
+  const t = useTranslations('ServicesGrid')
 
   return (
     <section id="services" className="py-20 md:py-28">
@@ -28,7 +28,7 @@ export function ServicesGrid({ data }: { data: ServicesSection }) {
             </h2>
           </div>
           <Link href="/services" className="text-sm font-medium hover:underline">
-            View All Services
+            {t('viewAllServices')}
           </Link>
         </header>
 
@@ -39,8 +39,6 @@ export function ServicesGrid({ data }: { data: ServicesSection }) {
             }`}
           >
             <Swiper
-              key={direction}
-              dir={direction}
               modules={[Navigation, A11y]}
               onSwiper={setSwiper}
               spaceBetween={32}
@@ -54,15 +52,14 @@ export function ServicesGrid({ data }: { data: ServicesSection }) {
             >
               {data.items.map((it, i) => (
                 <SwiperSlide key={i} className="!h-auto">
-                  <article className="group relative grid grid-cols-1 lg:grid-cols-2 items-start gap-8">
+                  <article className="relative grid grid-cols-1 lg:grid-cols-2 items-start gap-8">
                     {it.image && (
-                      <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl">
+                      <div className="group relative aspect-[3/4] w-full overflow-hidden rounded-xl">
                         <Image
                           src={it.image.src}
                           alt={it.image.alt || ''}
                           layout="fill"
-                          objectFit="cover"
-                          className="transition-transform duration-300 group-hover:scale-105"
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                       </div>
                     )}
@@ -83,13 +80,13 @@ export function ServicesGrid({ data }: { data: ServicesSection }) {
                         <Link
                           href="/services"
                           className="
-                            inline-flex items-center gap-2 font-semibold border-2 px-5 py-2.5 rounded-md
+                            group inline-flex items-center gap-2 font-semibold border-2 px-5 py-2.5 rounded-md
                             transition-colors no-underline text-base
                             text-[var(--color-primary)] border-[var(--color-primary)]
                             hover:bg-[var(--color-primary)] hover:text-white
                           "
                         >
-                          Explore
+                          {t('explore')}
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -100,7 +97,7 @@ export function ServicesGrid({ data }: { data: ServicesSection }) {
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            className="transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1"
+                            className="transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180"
                           >
                             <path d="M5 12h14" />
                             <path d="M12 5l7 7-7 7" />

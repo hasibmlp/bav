@@ -1,17 +1,20 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { useDirection, Locale } from '@/context/DirectionProvider'
+import { usePathname, useRouter } from '@/navigation'
+import { useLocale } from 'next-intl'
+import { useSearchParams } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 
 export function LanguageSwitcher({ isScrolled }: { isScrolled: boolean }) {
   const [isOpen, setIsOpen] = useState(false)
-  const { locale, setLocale } = useDirection()
   const ref = useRef<HTMLDivElement>(null)
-
-  const handleSetLocale = (newLocale: Locale) => {
-    setLocale(newLocale)
-    setIsOpen(false)
-  }
+  
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const currentLocale = useLocale() as 'en' | 'ar'
+  const t = useTranslations('LanguageSwitcher')
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -24,6 +27,12 @@ export function LanguageSwitcher({ isScrolled }: { isScrolled: boolean }) {
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [])
+
+  function switchTo(locale: 'en' | 'ar') {
+    const query = Object.fromEntries(searchParams)
+    router.replace({ pathname, query }, { locale })
+    setIsOpen(false)
+  }
 
   return (
     <div className="relative" ref={ref}>
@@ -48,7 +57,13 @@ export function LanguageSwitcher({ isScrolled }: { isScrolled: boolean }) {
           <line x1="2" y1="12" x2="22" y2="12" />
           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
         </svg>
-        <span>{locale.toUpperCase()}</span>
+        <p
+          className={`font-medium transition-colors ${
+            isScrolled ? 'text-neutral-800' : 'text-white'
+          }`}
+        >
+          {currentLocale === 'en' ? t('english') : t('arabic')}
+        </p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -72,20 +87,20 @@ export function LanguageSwitcher({ isScrolled }: { isScrolled: boolean }) {
         >
           <div className="py-1">
             <button
-              onClick={() => handleSetLocale('en')}
+              onClick={() => switchTo('en')}
               className={`block w-full px-4 py-2 text-left text-sm ${
                 isScrolled ? 'text-neutral-700 hover:bg-neutral-100' : 'text-white hover:bg-neutral-700'
               }`}
             >
-              English
+              {t('english')}
             </button>
             <button
-              onClick={() => handleSetLocale('ar')}
+              onClick={() => switchTo('ar')}
               className={`block w-full px-4 py-2 text-left text-sm ${
                 isScrolled ? 'text-neutral-700 hover:bg-neutral-100' : 'text-white hover:bg-neutral-700'
               }`}
             >
-              Arabic
+              {t('arabic')}
             </button>
           </div>
         </div>

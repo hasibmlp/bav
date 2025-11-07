@@ -1,6 +1,7 @@
-require('dotenv').config({ path: '.env.local' })
+require('dotenv').config({ path: '.env' })
 const contentful = require('contentful-management')
 const solutionsData = require('../src/lib/content/mocks/solutions.json')
+const solutionsDataAr = require('../src/lib/content/mocks/solutions.ar.json')
 const { run, asset } = require('./_utlis')
 
 const SPACE_ID = process.env.CONTENTFUL_SPACE_ID
@@ -18,17 +19,24 @@ async function importSolutions() {
 
   console.log('Importing Solutions Page data...')
   const sectionEntries = []
+  let heroImage; // Define heroImage in the outer scope
+  let heroSection;
+  let showcaseSection;
 
-  const findSection = (type) => solutionsData.sections.find((s) => s.type === type)
+  const findSection = (type, locale) =>
+    (locale === 'ar' ? solutionsDataAr : solutionsData).sections.find((s) => s.type === type)
 
   // 1. Hero Section
-  const heroData = findSection('hero')
+  const heroData = findSection('hero', 'en')
+  const heroDataAr = findSection('hero', 'ar')
   if (heroData) {
     console.log('Creating Hero section for Solutions page...')
-    const heroSection = await environment.createEntry('hero', {
+    heroImage = await asset.create(environment, { src: '/images/bav-hero.jpg', alt: 'Solutions Hero Image' })
+    heroSection = await environment.createEntry('hero', {
       fields: {
-        headline: { 'en-US': heroData.headline },
-        subheadline: { 'en-US': heroData.subheadline },
+        headline: { en: heroData.headline, ar: heroDataAr.headline },
+        subheadline: { en: heroData.subheadline, ar: heroDataAr.subheadline },
+        image: { en: { sys: { type: 'Link', linkType: 'Asset', id: heroImage.sys.id } } },
       },
     })
     await heroSection.publish()
@@ -37,19 +45,21 @@ async function importSolutions() {
   }
 
   // 2. Solutions Showcase Section
-  const showcaseData = findSection('solutions_showcase')
+  const showcaseData = findSection('solutions_showcase', 'en')
+  const showcaseDataAr = findSection('solutions_showcase', 'ar')
   if (showcaseData) {
     console.log('Creating Solution Showcase items...')
     const showcaseItems = await Promise.all(
-      showcaseData.items.map(async (item) => {
+      showcaseData.items.map(async (item, i) => {
+        const itemAr = showcaseDataAr.items[i]
         const imageAsset = await asset.create(environment, item.image)
         const entry = await environment.createEntry('solutionShowcaseItem', {
           fields: {
-            title: { 'en-US': item.title },
-            description: { 'en-US': item.description },
-            extended_description: { 'en-US': item.extended_description || '' },
-            features: { 'en-US': item.features || [] },
-            image: { 'en-US': { sys: { type: 'Link', linkType: 'Asset', id: imageAsset.sys.id } } },
+            title: { en: item.title, ar: itemAr.title },
+            description: { en: item.description, ar: itemAr.description },
+            extended_description: { en: item.extended_description || '', ar: itemAr.extended_description || '' },
+            features: { en: item.features || [], ar: itemAr.features || [] },
+            image: { en: { sys: { type: 'Link', linkType: 'Asset', id: imageAsset.sys.id } } },
           },
         })
         await entry.publish()
@@ -58,10 +68,11 @@ async function importSolutions() {
     )
 
     console.log('Creating Solutions Showcase section...')
-    const showcaseSection = await environment.createEntry('solutionsShowcase', {
+    showcaseSection = await environment.createEntry('solutionsShowcase', {
       fields: {
+        internalTitle: { en: 'Solutions Showcase Section' },
         items: {
-          'en-US': showcaseItems.map((item) => ({ sys: { type: 'Link', linkType: 'Entry', id: item.sys.id } })),
+          en: showcaseItems.map((item) => ({ sys: { type: 'Link', linkType: 'Entry', id: item.sys.id } })),
         },
       },
     })
@@ -74,10 +85,16 @@ async function importSolutions() {
   console.log('Creating Solutions page entry...')
   const page = await environment.createEntry('page', {
     fields: {
-      title: { 'en-US': solutionsData.title },
-      slug: { 'en-US': solutionsData.slug },
+      title: { en: solutionsData.title, ar: solutionsDataAr.title },
+      slug: { en: solutionsData.slug, ar: solutionsDataAr.slug },
+      heroImage: {
+        en: { sys: { type: 'Link', linkType: 'Asset', id: heroImage.sys.id } },
+      },
       sections: {
-        'en-US': sectionEntries.map((entry) => ({ sys: { type: 'Link', linkType: 'Entry', id: entry.sys.id } })),
+        en: [
+          { sys: { type: 'Link', linkType: 'Entry', id: heroSection.sys.id } },
+          { sys: { type: 'Link', linkType: 'Entry', id: showcaseSection.sys.id } },
+        ],
       },
     },
   })

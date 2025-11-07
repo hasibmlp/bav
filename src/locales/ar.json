@@ -1,0 +1,38 @@
+{
+  "Navigation": {
+    "solutions": "الحلول",
+    "services": "الخدمات",
+    "sectors": "القطاعات",
+    "partners": "الشركاء",
+    "about": "عن بيف",
+    "contact": "اتصل بنا"
+  },
+  "Footer": {
+    "tagline": "دعونا نتعاون في مشروعكم السمعي البصري القادم.",
+    "navigation": "التنقل",
+    "company": "الشركة",
+    "copyright": "© {year} BAV. كل الحقوق محفوظة."
+  },
+  "FooterCTA": {
+    "title": "هل أنت مستعد لبدء مشروعك؟",
+    "description": "نحن على استعداد لتقديم خبرتنا لتحديك القادم. تواصل معنا لمناقشة احتياجات مشروعك.",
+    "button": "ابق على تواصل"
+  },
+  "ServicesGrid": {
+    "viewAllServices": "عرض جميع الخدمات",
+    "explore": "اكتشف"
+  },
+  "ContactForm": {
+    "fullName": "الاسم الكامل",
+    "emailAddress": "عنوان البريد الإلكتروني",
+    "subject": "الموضوع",
+    "message": "الرسالة",
+    "sendMessage": "إرسال الرسالة",
+    "thankYouMessage": "شكرا لرسالتك! سوف نتواصل معك قريبا.",
+    "sending": "جاري الإرسال..."
+  },
+  "LanguageSwitcher": {
+    "english": "English",
+    "arabic": "العربية"
+  }
+}

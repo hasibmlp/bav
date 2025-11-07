@@ -1,6 +1,6 @@
 // src/components/sections/CTA.tsx
 import type { CTASection } from '@/types/view'
-import Link from 'next/link'
+import { Link } from '@/navigation' // Using next-intl Link to preserve locale
 
 export function CTA({ data }: { data: CTASection }) {
   return (

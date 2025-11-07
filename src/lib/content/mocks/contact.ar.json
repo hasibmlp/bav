@@ -1,0 +1,11 @@
+{
+  "title": "اتصل بنا",
+  "slug": "contact",
+  "heroImage": "/images/bav-hero.jpg",
+  "sections": [
+    {
+      "type": "contactForm",
+      "internalTitle": "نموذج الاتصال الرئيسي"
+    }
+  ]
+}

@@ -19,7 +19,9 @@
             "Advanced camera technology for crystal-clear visuals",
             "Reliable imaging solutions for corporate and educational setups"
           ],
-          "fit": "Canon’s expertise in precision imaging perfectly complements Be Av’s mission to deliver sharp, vibrant, and impactful visual solutions for every environment."
+          "fit": "Canon’s expertise in precision imaging perfectly complements Be Av’s mission to deliver sharp, vibrant, and impactful visual solutions for every environment.",
+          "url": "/contact",
+          "ctaLabel": "Learn More"
         },
         {
           "name": "Crestron",
@@ -30,7 +32,9 @@
             "Integrated meeting room and presentation solutions",
             "Scalable automation for residential and commercial use"
           ],
-          "fit": "Crestron’s intelligent control systems empower Be Av to create fully integrated environments — enhancing functionality, connectivity, and user experience across all AV projects."
+          "fit": "Crestron’s intelligent control systems empower Be Av to create fully integrated environments — enhancing functionality, connectivity, and user experience across all AV projects.",
+          "url": "/contact",
+          "ctaLabel": "Learn More"
         },
         {
           "name": "Insta360",
@@ -41,7 +45,9 @@
             "Compact and versatile camera design",
             "High-quality output ideal for events, media, and corporate use"
           ],
-          "fit": "As the AV industry embraces immersive experiences, Insta360 aligns perfectly with Be Av’s commitment to bringing next-generation imaging solutions to clients who demand creativity and innovation."
+          "fit": "As the AV industry embraces immersive experiences, Insta360 aligns perfectly with Be Av’s commitment to bringing next-generation imaging solutions to clients who demand creativity and innovation.",
+          "url": "/contact",
+          "ctaLabel": "Learn More"
         },
         {
           "name": "ViewSonic",
@@ -52,7 +58,9 @@
             "Interactive flat panels for education and business",
             "Robust digital signage systems for retail and hospitality"
           ],
-          "fit": "ViewSonic’s reliable and innovative display solutions strengthen Be Av’s portfolio in delivering exceptional visual performance for diverse applications."
+          "fit": "ViewSonic’s reliable and innovative display solutions strengthen Be Av’s portfolio in delivering exceptional visual performance for diverse applications.",
+          "url": "/contact",
+          "ctaLabel": "Learn More"
         },
         {
           "name": "Devialet",
@@ -63,7 +71,9 @@
             "High-fidelity sound systems with elegant aesthetics",
             "Immersive and powerful audio experience"
           ],
-          "fit": "With Devialet, Be Av enhances its offerings in premium sound integration — providing clients with audio systems that deliver both design excellence and unmatched performance."
+          "fit": "With Devialet, Be Av enhances its offerings in premium sound integration — providing clients with audio systems that deliver both design excellence and unmatched performance.",
+          "url": "/contact",
+          "ctaLabel": "Learn More"
         }
       ]
     },

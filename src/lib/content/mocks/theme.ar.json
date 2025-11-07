@@ -1,0 +1,24 @@
+{
+  "navigation": {
+    "items": [
+      {
+        "label": "الحلول"
+      },
+      {
+        "label": "الخدمات"
+      },
+      {
+        "label": "القطاعات"
+      },
+      {
+        "label": "الشركاء"
+      },
+      {
+        "label": "حول"
+      }
+    ]
+  },
+  "darkColor": "#021F2F",
+  "lightBgColor": "#F8F9FA",
+  "footerBackgroundColor": "#021F2F"
+}

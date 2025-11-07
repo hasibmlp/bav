@@ -1,6 +1,7 @@
-require('dotenv').config({ path: '.env.local' })
+require('dotenv').config({ path: '.env' })
 const contentful = require('contentful-management')
 const sectorsData = require('../src/lib/content/mocks/sectors.json')
+const sectorsDataAr = require('../src/lib/content/mocks/sectors.ar.json')
 const { run, asset } = require('./_utlis')
 
 const SPACE_ID = process.env.CONTENTFUL_SPACE_ID
@@ -18,17 +19,25 @@ async function importSectors() {
 
   console.log('Importing Sectors Page data...')
   const sectionEntries = []
+  let heroImage; // Define heroImage in the outer scope
+  let heroSection;
+  let gridSection;
+  let ctaSection;
 
-  const findSection = (type) => sectorsData.sections.find((s) => s.type === type)
+  const findSection = (type, locale) =>
+    (locale === 'ar' ? sectorsDataAr : sectorsData).sections.find((s) => s.type === type)
 
   // 1. Hero Section
-  const heroData = findSection('hero')
+  const heroData = findSection('hero', 'en')
+  const heroDataAr = findSection('hero', 'ar')
   if (heroData) {
     console.log('Creating Hero section for Sectors page...')
-    const heroSection = await environment.createEntry('hero', {
+    heroImage = await asset.create(environment, { src: '/images/bav-hero.jpg', alt: 'Sectors Hero Image' })
+    heroSection = await environment.createEntry('hero', {
       fields: {
-        headline: { 'en-US': heroData.headline },
-        subheadline: { 'en-US': heroData.subheadline },
+        headline: { en: heroData.headline, ar: heroDataAr.headline },
+        subheadline: { en: heroData.subheadline, ar: heroDataAr.subheadline },
+        image: { en: { sys: { type: 'Link', linkType: 'Asset', id: heroImage.sys.id } } },
       },
     })
     await heroSection.publish()
@@ -37,17 +46,19 @@ async function importSectors() {
   }
 
   // 2. Sectors Grid Section
-  const gridData = findSection('sectors_grid')
+  const gridData = findSection('sectors_grid', 'en')
+  const gridDataAr = findSection('sectors_grid', 'ar')
   if (gridData) {
     console.log('Creating Sector items...')
     const gridItems = await Promise.all(
-      gridData.items.map(async (item) => {
+      gridData.items.map(async (item, i) => {
+        const itemAr = gridDataAr.items[i]
         const imageAsset = await asset.create(environment, item.image)
         const entry = await environment.createEntry('sectorItem', {
           fields: {
-            title: { 'en-US': item.title },
-            description: { 'en-US': item.description },
-            image: { 'en-US': { sys: { type: 'Link', linkType: 'Asset', id: imageAsset.sys.id } } },
+            title: { en: item.title, ar: itemAr.title },
+            description: { en: item.description, ar: itemAr.description },
+            image: { en: { sys: { type: 'Link', linkType: 'Asset', id: imageAsset.sys.id } } },
           },
         })
         await entry.publish()
@@ -56,10 +67,11 @@ async function importSectors() {
     )
 
     console.log('Creating Sectors Grid section...')
-    const gridSection = await environment.createEntry('sectorsGrid', {
+    gridSection = await environment.createEntry('sectorsGrid', {
       fields: {
+        internalTitle: { en: 'Sectors Grid Section' },
         items: {
-          'en-US': gridItems.map((item) => ({ sys: { type: 'Link', linkType: 'Entry', id: item.sys.id } })),
+          en: gridItems.map((item) => ({ sys: { type: 'Link', linkType: 'Entry', id: item.sys.id } })),
         },
       },
     })
@@ -69,14 +81,15 @@ async function importSectors() {
   }
   
     // 3. CTA Section
-    const ctaData = findSection('cta')
+    const ctaData = findSection('cta', 'en')
+    const ctaDataAr = findSection('cta', 'ar')
     if (ctaData) {
       console.log('Creating CTA section for Sectors page...')
-      const ctaSection = await environment.createEntry('cta', {
+      ctaSection = await environment.createEntry('cta', {
         fields: {
-          headline: { 'en-US': ctaData.headline },
-          ctaLabel: { 'en-US': ctaData.ctaLabel },
-          ctaHref: { 'en-US': ctaData.ctaHref },
+          headline: { en: ctaData.headline, ar: ctaDataAr.headline },
+          ctaLabel: { en: ctaData.ctaLabel, ar: ctaDataAr.ctaLabel },
+          ctaHref: { en: ctaData.ctaHref },
         },
       })
       await ctaSection.publish()
@@ -88,10 +101,17 @@ async function importSectors() {
   console.log('Creating Sectors page entry...')
   const page = await environment.createEntry('page', {
     fields: {
-      title: { 'en-US': sectorsData.title },
-      slug: { 'en-US': sectorsData.slug },
+      title: { en: sectorsData.title, ar: sectorsDataAr.title },
+      slug: { en: sectorsData.slug, ar: sectorsDataAr.slug },
+      heroImage: {
+        en: { sys: { type: 'Link', linkType: 'Asset', id: heroImage.sys.id } },
+      },
       sections: {
-        'en-US': sectionEntries.map((entry) => ({ sys: { type: 'Link', linkType: 'Entry', id: entry.sys.id } })),
+        en: [
+          { sys: { type: 'Link', linkType: 'Entry', id: heroSection.sys.id } },
+          { sys: { type: 'Link', linkType: 'Entry', id: gridSection.sys.id } },
+          { sys: { type: 'Link', linkType: 'Entry', id: ctaSection.sys.id } },
+        ],
       },
     },
   })

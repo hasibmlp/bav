@@ -1,6 +1,7 @@
-require('dotenv').config({ path: '.env.local' })
+require('dotenv').config({ path: '.env' })
 const contentful = require('contentful-management')
 const aboutData = require('../src/lib/content/mocks/about.json')
+const aboutDataAr = require('../src/lib/content/mocks/about.ar.json')
 const { run, asset } = require('./_utlis')
 
 const SPACE_ID = process.env.CONTENTFUL_SPACE_ID
@@ -18,19 +19,22 @@ async function importAbout() {
 
   console.log('Importing About Page data...')
   const sectionEntries = []
+  let heroImage; // Define heroImage in the outer scope
 
-  const findSection = (type) => aboutData.sections.find((s) => s.type === type)
+  const findSection = (type, locale) =>
+    (locale === 'ar' ? aboutDataAr : aboutData).sections.find((s) => s.type === type)
 
   // 1. Hero Section
-  const heroData = findSection('hero')
+  const heroData = findSection('hero', 'en')
+  const heroDataAr = findSection('hero', 'ar')
   if (heroData) {
-    console.log('Creating Hero section...')
-    const heroImage = await asset.create(environment, { src: '/images/bav-hero.jpg', alt: 'A professional team collaborating in a modern office environment.' })
+    console.log('Creating Hero section for About page...')
+    heroImage = await asset.create(environment, { src: '/images/bav-hero.jpg', alt: 'A professional team collaborating in a modern office environment.' })
     const heroSection = await environment.createEntry('hero', {
       fields: {
-        headline: { 'en-US': heroData.headline },
-        subheadline: { 'en-US': heroData.subheadline },
-        image: { 'en-US': { sys: { type: 'Link', linkType: 'Asset', id: heroImage.sys.id } } },
+        headline: { en: heroData.headline, ar: heroDataAr.headline },
+        subheadline: { en: heroData.subheadline, ar: heroDataAr.subheadline },
+        image: { en: { sys: { type: 'Link', linkType: 'Asset', id: heroImage.sys.id } } },
       },
     })
     await heroSection.publish()
@@ -39,26 +43,27 @@ async function importAbout() {
   }
 
   // 2. Snapshot Section
-  const snapshotData = findSection('snapshot')
+  const snapshotData = findSection('snapshot', 'en')
+  const snapshotDataAr = findSection('snapshot', 'ar')
   if (snapshotData) {
-    console.log('Creating Metric items...')
+    console.log('Creating Snapshot section...')
     const metricItems = await Promise.all(
-      snapshotData.metrics.map(async (metric) => {
+      snapshotData.metrics.map(async (metric, i) => {
+        const metricAr = snapshotDataAr.metrics[i]
         const entry = await environment.createEntry('metricItem', {
           fields: {
-            value: { 'en-US': metric.value },
-            label: { 'en-US': metric.label },
+            value: { en: metric.value, ar: metricAr.value },
+            label: { en: metric.label, ar: metricAr.label },
           },
         })
         await entry.publish()
         return entry
       })
     )
-    console.log('Creating Snapshot section...')
     const snapshotSection = await environment.createEntry('snapshot', {
       fields: {
-        title: { 'en-US': snapshotData.title },
-        metrics: { 'en-US': metricItems.map((item) => ({ sys: { type: 'Link', linkType: 'Entry', id: item.sys.id } })) },
+        title: { en: snapshotData.title, ar: snapshotDataAr.title },
+        metrics: { en: metricItems.map((item) => ({ sys: { type: 'Link', linkType: 'Entry', id: item.sys.id } })) },
       },
     })
     await snapshotSection.publish()
@@ -66,44 +71,46 @@ async function importAbout() {
     console.log('Published Snapshot section.')
   }
 
-  // 3. Values Section
-  const valuesData = findSection('values')
+  // 3. Values Grid Section
+  const valuesData = findSection('values', 'en')
+  const valuesDataAr = findSection('values', 'ar')
   if (valuesData) {
-    console.log('Creating Value items...')
+    console.log('Creating Values Grid section...')
     const valueItems = await Promise.all(
-      valuesData.items.map(async (item) => {
+      valuesData.items.map(async (item, i) => {
+        const itemAr = valuesDataAr.items[i]
         const entry = await environment.createEntry('valueItem', {
           fields: {
-            title: { 'en-US': item.title },
-            description: { 'en-US': item.description },
-            icon: { 'en-US': item.icon },
+            title: { en: item.title, ar: itemAr.title },
+            description: { en: item.description, ar: itemAr.description },
+            icon: { en: item.icon },
           },
         })
         await entry.publish()
         return entry
       })
     )
-    console.log('Creating Values section...')
     const valuesSection = await environment.createEntry('valuesGrid', {
       fields: {
-        title: { 'en-US': valuesData.title },
-        items: { 'en-US': valueItems.map((item) => ({ sys: { type: 'Link', linkType: 'Entry', id: item.sys.id } })) },
+        title: { en: valuesData.title, ar: valuesDataAr.title },
+        items: { en: valueItems.map((item) => ({ sys: { type: 'Link', linkType: 'Entry', id: item.sys.id } })) },
       },
     })
     await valuesSection.publish()
     sectionEntries.push(valuesSection)
-    console.log('Published Values section.')
+    console.log('Published Values Grid section.')
   }
-  
+
   // 4. CTA Section
-  const ctaData = findSection('cta')
+  const ctaData = findSection('cta', 'en')
+  const ctaDataAr = findSection('cta', 'ar')
   if (ctaData) {
-    console.log('Creating CTA section...')
+    console.log('Creating CTA section for About page...')
     const ctaSection = await environment.createEntry('cta', {
       fields: {
-        headline: { 'en-US': ctaData.headline },
-        ctaLabel: { 'en-US': ctaData.ctaLabel },
-        ctaHref: { 'en-US': ctaData.ctaHref },
+        headline: { en: ctaData.headline, ar: ctaDataAr.headline },
+        ctaLabel: { en: ctaData.ctaLabel, ar: ctaDataAr.ctaLabel },
+        ctaHref: { en: ctaData.ctaHref },
       },
     })
     await ctaSection.publish()
@@ -115,10 +122,13 @@ async function importAbout() {
   console.log('Creating About page entry...')
   const page = await environment.createEntry('page', {
     fields: {
-      title: { 'en-US': aboutData.title },
-      slug: { 'en-US': aboutData.slug },
+      title: { en: aboutData.title, ar: aboutDataAr.title },
+      slug: { en: aboutData.slug, ar: aboutDataAr.slug },
+      heroImage: {
+        en: { sys: { type: 'Link', linkType: 'Asset', id: heroImage.sys.id } },
+      },
       sections: {
-        'en-US': sectionEntries.map((entry) => ({ sys: { type: 'Link', linkType: 'Entry', id: entry.sys.id } })),
+        en: sectionEntries.map((entry) => ({ sys: { type: 'Link', linkType: 'Entry', id: entry.sys.id } })),
       },
     },
   })

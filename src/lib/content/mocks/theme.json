@@ -1,0 +1,34 @@
+{
+  "internalTitle": "Default Theme",
+  "primaryColor": "#1BA3B6",
+  "primaryColorRgb": "27, 163, 182",
+  "primaryColorTint": "rgba(23, 109, 117, 0.1)",
+  "secondaryColor": "#9DB4AD",
+  "darkColor": "#021F2F",
+  "lightBgColor": "#F8F9FA",
+  "footerBackgroundColor": "#072339",
+  "navigation": {
+    "items": [
+      {
+        "label": "Solutions",
+        "href": "/solutions"
+      },
+      {
+        "label": "Services",
+        "href": "/services"
+      },
+      {
+        "label": "Sectors",
+        "href": "/sectors"
+      },
+      {
+        "label": "Partners",
+        "href": "/partners"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      }
+    ]
+  }
+}

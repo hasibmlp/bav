@@ -1,0 +1,38 @@
+{
+  "Navigation": {
+    "solutions": "Solutions",
+    "services": "Services",
+    "sectors": "Sectors",
+    "partners": "Partners",
+    "about": "About BeAV",
+    "contact": "Contact Us"
+  },
+  "Footer": {
+    "tagline": "Let’s collaborate on your next AV project.",
+    "navigation": "Navigation",
+    "company": "Company",
+    "copyright": "© {year} BAV. All rights reserved."
+  },
+  "FooterCTA": {
+    "title": "Ready to Start Your Project?",
+    "description": "We're ready to bring our expertise to your next challenge. Reach out to discuss your project needs.",
+    "button": "Get in Touch"
+  },
+  "ServicesGrid": {
+    "viewAllServices": "View All Services",
+    "explore": "Explore"
+  },
+  "ContactForm": {
+    "fullName": "Full Name",
+    "emailAddress": "Email Address",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "thankYouMessage": "Thank you for your message! We will get back to you soon.",
+    "sending": "Sending..."
+  },
+  "LanguageSwitcher": {
+    "english": "English",
+    "arabic": "Arabic"
+  }
+}

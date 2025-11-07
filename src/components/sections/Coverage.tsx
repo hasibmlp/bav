@@ -17,10 +17,7 @@ export function Coverage({ data }: { data: CoverageSection }) {
                 </h2>
               </header>
             )}
-            <p className="text-neutral-700">
-              Headquartered in the UAE, we provide project-driven support and distribution across the
-              entire GCC region.
-            </p>
+            {data.subtitle && <p className="text-neutral-700">{data.subtitle}</p>}
             <div className="mt-6 grid gap-x-6 gap-y-3 sm:grid-cols-2">
               {data.regions.map((region, i) => (
                 <div key={i} className="flex items-center gap-3">
@@ -49,9 +46,6 @@ export function Coverage({ data }: { data: CoverageSection }) {
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-sm text-neutral-600">
-              And expanding to new countries.
-            </p>
           </div>
           <div className="relative aspect-[4/3] w-full">
             <Image

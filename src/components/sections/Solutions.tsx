@@ -8,11 +8,9 @@ import { Navigation, A11y, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import { useInView } from 'react-intersection-observer'
-import { useDirection } from '@/context/DirectionProvider'
 
 export function Solutions({ data }: { data: SolutionsSection }) {
   const swiperRef = useRef<SwiperClass | null>(null)
-  const { direction } = useDirection()
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true })
   const [swiper, setSwiper] = useState<SwiperClass | null>(null)
 
@@ -42,8 +40,6 @@ export function Solutions({ data }: { data: SolutionsSection }) {
             ref={(node) => {
               if (node) swiperRef.current = node.swiper
             }}
-            key={direction}
-            dir={direction}
             modules={[Navigation, A11y, Autoplay]}
             navigation={{ nextEl: '.next-solution', prevEl: '.prev-solution' }}
             loop
@@ -74,7 +70,7 @@ export function Solutions({ data }: { data: SolutionsSection }) {
                         src={item.image.src}
                         alt={item.image.alt || item.title}
                         layout="fill"
-                        objectFit="cover"
+                        className="object-cover"
                       />
                       <div
                         className={`absolute inset-0 bg-gradient-to-t from-black/80 to-transparent transition-opacity duration-300 ${

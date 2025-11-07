@@ -18,7 +18,11 @@ const run = (fn) =>
 const asset = {
   async create(environment, { src, alt }) {
     console.log(`Uploading asset ${src}...`)
-    const filePath = path.join(__dirname, '..', 'public', src)
+
+    // Correctly resolve the file path from the project root's 'public' directory
+    const relativeSrc = src.startsWith('/') ? src.substring(1) : src
+    const filePath = path.join(process.cwd(), 'public', relativeSrc)
+    
     const fileName = path.basename(filePath)
     const contentType = mime.lookup(filePath)
 
@@ -26,20 +30,22 @@ const asset = {
       throw new Error(`Asset file not found at ${filePath}`)
     }
 
+    // Use the correct structure for uploading a local file
     let asset = await environment.createAssetFromFiles({
       fields: {
-        title: { 'en-US': alt || fileName },
-        description: { 'en-US': alt || '' },
+        title: { en: alt || fileName },
+        description: { en: alt || '' },
         file: {
-          'en-US': {
+          en: {
             contentType,
             fileName,
-            upload: `https://raw.githubusercontent.com/contentful/contentful-migration/master/test/images/${fileName}`, // This is a placeholder, actual file upload happens differently
+            file: fs.readFileSync(filePath), // Use fs.readFileSync to provide the file buffer
           },
         },
       },
     })
-    asset = await asset.processForLocale('en-US', { processingCheckWait: 2000 })
+
+    asset = await asset.processForLocale('en', { processingCheckWait: 2000 })
     await asset.publish()
     console.log(`Published asset ${fileName}.`)
     return asset

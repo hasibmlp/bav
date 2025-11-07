@@ -12,6 +12,8 @@ export type HeroSection = {
   subheadline?: string
   ctaLabel?: string
   ctaHref?: string
+  secondaryCtaLabel?: string
+  secondaryCtaHref?: string
   image?: ImageView
 }
 
@@ -51,12 +53,14 @@ export type ValuesSection = {
 export type CoverageSection = {
   type: 'coverage'
   title?: string
+  subtitle?: string
   regions: string[]
 }
 
 export type WhyUsSection = {
   type: 'whyus'
   title?: string
+  description?: string
   bullets: string[]
 }
 
@@ -103,6 +107,8 @@ export type PartnersShowcaseSection = {
     description: string
     features: string[]
     fit: string
+    url?: string
+    ctaLabel?: string
   }[]
 }
 
@@ -150,6 +156,42 @@ export type SectionView =
 export type PageView = {
   slug: string
   title: string
+  heroImage?: ImageView
   sections: SectionView[]
   meta?: { description?: string }
+}
+
+export type NavigationLink = {
+  label: string
+  href: string
+}
+
+export type NavigationMenu = {
+  items: NavigationLink[]
+}
+
+export type ThemeSettings = {
+  navigation: NavigationMenu
+  primaryColor?: string
+  primaryColorRgb?: string
+  primaryColorTint?: string
+  secondaryColor?: string
+  darkColor?: string
+  lightBgColor?: string
+  footerBackgroundColor?: string
+}
+
+export type PartnerItem = {
+  name: string
+  logo: ImageView
+  description: string
+  features: string[]
+  fit: string
+  url?: string
+  ctaLabel?: string
+}
+
+export type NavigationItem = {
+  label: string
+  href: string
 }

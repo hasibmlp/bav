@@ -1,14 +1,11 @@
 {
-  "slug": "contact",
   "title": "Contact Us",
+  "slug": "contact",
+  "heroImage": "/images/bav-hero.jpg",
   "sections": [
     {
-      "type": "hero",
-      "headline": "Get in Touch",
-      "subheadline": "We're here to help with any questions you may have about our products, services, or partnerships. Reach out to us, and let's start a conversation."
-    },
-    {
-      "type": "contact"
+      "type": "contactForm",
+      "internalTitle": "Main Contact Form"
     }
   ]
 }

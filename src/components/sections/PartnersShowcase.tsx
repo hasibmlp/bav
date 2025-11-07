@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import type { PartnersShowcaseSection } from '@/types/view'
+import { Link } from '@/navigation'
 
 export function PartnersShowcase({ data }: { data: PartnersShowcaseSection }) {
   return (
@@ -26,9 +27,14 @@ export function PartnersShowcase({ data }: { data: PartnersShowcaseSection }) {
               >
                 <h3 className="text-2xl font-bold">{item.name}</h3>
                 <p className="mt-2 text-sm">{item.description}</p>
-                <button className="mt-4 rounded-full bg-white px-4 py-2 text-sm font-semibold text-black transition-colors hover:bg-neutral-200">
-                  Learn More
-                </button>
+                {item.url && item.ctaLabel && (
+                  <Link
+                    href={item.url}
+                    className="mt-4 rounded-full bg-white px-4 py-2 text-sm font-semibold text-black transition-colors hover:bg-neutral-200 no-underline"
+                  >
+                    {item.ctaLabel}
+                  </Link>
+                )}
               </div>
             </div>
           ))}

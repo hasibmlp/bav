@@ -1,29 +1,23 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from '@/navigation'
 import Image from 'next/image'
 import { FooterCTA } from './FooterCTA'
-import { useDirection } from '@/context/DirectionProvider'
+import { useTranslations } from 'next-intl'
+import type { NavigationMenu } from '@/types/view'
 
-const mainNav = [
-  { href: '/solutions', label: 'Solutions' },
-  { href: '/services', label: 'Services' },
-  { href: '/sectors', label: 'Sectors' },
-]
+export function Footer({ navigation }: { navigation: NavigationMenu }) {
+  const t = useTranslations('Footer')
+  const navLinks = navigation.items
 
-const companyNav = [
-  { href: '/partners', label: 'Partners' },
-  { href: '/about', label: 'About BAV' },
-  { href: '/contact', label: 'Contact Us' },
-]
+  const half = Math.ceil(navLinks.length / 2)
+  const firstHalf = navLinks.slice(0, half)
+  const secondHalf = navLinks.slice(half)
 
-export function Footer() {
-  const { direction } = useDirection()
   return (
     <footer
       className="mt-24 border-t border-neutral-200/70"
-      style={{ backgroundColor: 'var(--color-primary)' }}
-      dir={direction}
+      style={{ backgroundColor: 'var(--color-footer-bg, var(--color-primary))' }}
     >
       <FooterCTA />
       <hr className="border-t border-white/10 max-w-7xl mx-auto" />
@@ -40,20 +34,18 @@ export function Footer() {
               />
             </Link>
             <div className="mt-2">
-              <p className="text-white text-sm">Let’s collaborate on your next AV project.</p>
+              <p className="text-white text-sm">{t('tagline')}</p>
             </div>
           </div>
           <div className="grid gap-2">
-            <h3 className="text-lg font-medium text-white">Navigation</h3>
-            {mainNav.map((item) => (
+            {firstHalf.map((item) => (
               <Link key={item.href} href={item.href} className="text-base text-white hover:opacity-80">
                 {item.label}
               </Link>
             ))}
           </div>
           <div className="grid gap-2">
-            <h3 className="text-lg font-medium text-white">Company</h3>
-            {companyNav.map((item) => (
+            {secondHalf.map((item) => (
               <Link key={item.href} href={item.href} className="text-base text-white hover:opacity-80">
                 {item.label}
               </Link>
@@ -61,8 +53,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-20 border-t border-white/20 pt-16 flex flex-col sm:flex-row items-center justify-between text-sm text-white">
-          <p>&copy; {new Date().getFullYear()} BAV. All rights reserved.</p>
-          {/* Social links can go here */}
+          <p>{t('copyright', { year: new Date().getFullYear() })}</p>
         </div>
       </div>
     </footer>

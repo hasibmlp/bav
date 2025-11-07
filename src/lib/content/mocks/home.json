@@ -4,11 +4,16 @@
   "sections": [
     {
       "type": "hero",
-      "eyebrow": "Be an AV pioneer",
-      "headline": "Your Project-Driven AV Partner in GCC",
-      "subheadline": "We provide value-added audiovisual distribution and project support across the Gulf region, delivering innovative solutions tailored to your needs.",
+      "eyebrow": "Audiovisual Excellence",
+      "headline": "Transforming Spaces with Cutting-Edge AV Solutions",
+      "subheadline": "From corporate boardrooms to dynamic public venues, we design and integrate audiovisual systems that captivate, communicate, and collaborate.",
+      "ctaLabel": "Our Solutions",
+      "ctaHref": "/solutions",
+      "secondaryCtaLabel": "Contact Us",
+      "secondaryCtaHref": "/contact",
       "video": {
-        "src": "/videos/bav-hero-video.mp4"
+        "src": "/videos/bav-hero-video.mp4",
+        "contentType": "video/mp4"
       },
       "cta": [
         { "label": "Explore", "href": "/solutions" },
@@ -145,8 +150,16 @@
     },
     {
       "type": "coverage",
-      "title": "Territory Coverage",
-      "regions": ["UAE (HQ)", "KSA", "Qatar", "Kuwait", "Bahrain", "Oman"]
+      "title": "Our Territory",
+      "subtitle": "Headquartered in the UAE, we provide project-driven support and distribution across the entire GCC region.",
+      "regions": [
+        "United Arab Emirates",
+        "Kingdom of Saudi Arabia",
+        "Qatar",
+        "Kuwait",
+        "Bahrain",
+        "Oman"
+      ]
     },
     {
       "type": "whyus",
