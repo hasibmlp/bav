@@ -1,6 +1,5 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, A11y } from 'swiper/modules'
 import 'swiper/css'
@@ -9,24 +8,11 @@ import type { BrandsSection } from '@/types/view'
 import Image from 'next/image'
 
 export function BrandsWall({ data }: { data: BrandsSection }) {
-  const [isDesktop, setIsDesktop] = useState(false)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 768)
-    }
-    handleResize()
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  const hasEnoughForMobile = data.items.length > 2
-  const hasEnoughForDesktop = data.items.length > 6
-  const shouldRenderSlider = (!isDesktop && hasEnoughForMobile) || (isDesktop && hasEnoughForDesktop)
-  const canAutoplay = shouldRenderSlider
+  // To ensure smooth looping with autoplay, we duplicate the items if they are not enough to fill the view.
+  const items = data.items.length > 6 ? data.items : [...data.items, ...data.items]
 
   return (
-    <section className="py-20 md:py-28">
+    <section className="pb-20 md:pb-28">
       {data.title && (
         <div className="mx-auto max-w-7xl px-4">
           <header className="mb-8 text-center md:mb-20">
@@ -39,18 +25,14 @@ export function BrandsWall({ data }: { data: BrandsSection }) {
           </header>
         </div>
       )}
-      {shouldRenderSlider ? (
+      {items.length > 0 && (
         <Swiper
           modules={[Autoplay, A11y]}
-          loop={canAutoplay}
-          autoplay={
-            canAutoplay
-              ? {
-                  delay: 0,
-                  disableOnInteraction: false,
-                }
-              : false
-          }
+          loop
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+          }}
           speed={5000}
           allowTouchMove={false}
           slidesPerView={5}
@@ -63,8 +45,8 @@ export function BrandsWall({ data }: { data: BrandsSection }) {
           }}
           className="swiper-brands min-h-[50px]"
         >
-          {data.items.map((item) => (
-            <SwiperSlide key={item.id}>
+          {items.map((item, index) => (
+            <SwiperSlide key={`${item.id}-${index}`}>
               <div className="flex h-12 w-32 items-center justify-center md:h-16 md:w-40 lg:h-16 lg:w-48">
                 <Image
                   src={item.logo.src}
@@ -77,23 +59,6 @@ export function BrandsWall({ data }: { data: BrandsSection }) {
             </SwiperSlide>
           ))}
         </Swiper>
-      ) : (
-        <div className="flex w-full flex-wrap items-center justify-center gap-x-24 gap-y-12 px-4">
-          {data.items.map((item) => (
-            <div
-              key={item.id}
-              className="flex h-12 w-32 items-center justify-center md:h-16 md:w-40 lg:h-16 lg:w-48"
-            >
-              <Image
-                src={item.logo.src}
-                alt={item.logo.alt || item.name}
-                width={90}
-                height={30}
-                className="h-full w-full object-contain"
-              />
-            </div>
-          ))}
-        </div>
       )}
     </section>
   )
