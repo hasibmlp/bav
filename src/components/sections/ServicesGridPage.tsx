@@ -29,12 +29,12 @@ export function ServicesGridPage({ data }: { data: ServicesSection }) {
         <div className="space-y-24">
           {data.items.map((item, i) => (
             <div key={i} className="relative">
-              <article className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-16">
+              <article className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-16">
                 {/* Left Column: Content */}
                 <div
-                  className={`flex flex-col items-start lg:items-end ${
-                    i % 2 !== 0 ? 'lg:order-last' : ''
-                  }`}
+                  className={`flex flex-col items-start ${
+                    i % 2 === 0 ? 'lg:items-end' : 'lg:items-start'
+                  } ${i % 2 !== 0 ? 'lg:order-last' : ''}`}
                 >
                   <div className="lg:max-w-md w-full">
                     <div
@@ -44,11 +44,15 @@ export function ServicesGridPage({ data }: { data: ServicesSection }) {
                       <span className="text-4xl font-bold">0{i + 1}</span>
                       <div className="w-10 h-10">{icons[item.title]}</div>
                     </div>
-                    <h3 className="mt-4 text-2xl font-semibold text-neutral-900 lg:text-right">
+                    <h3
+                      className={`mt-4 text-2xl font-semibold text-neutral-900`}
+                    >
                       {item.title}
                     </h3>
                     {item.description && (
-                      <p className="mt-4 text-lg text-neutral-700 lg:text-right">
+                      <p
+                        className={`mt-4 text-lg text-neutral-700`}
+                      >
                         {item.description}
                       </p>
                     )}
@@ -56,7 +60,7 @@ export function ServicesGridPage({ data }: { data: ServicesSection }) {
                 </div>
 
                 {/* Right Column: Image */}
-                <div className="flex flex-col items-start">
+                <div className={`flex flex-col items-start lg:pt-14 ${i % 2 === 0 ? 'lg:items-start' : 'lg:items-end'}`}>
                   {item.image && (
                     <div className="relative aspect-[4/3] w-full max-w-md overflow-hidden rounded-xl">
                       <Image

@@ -49,13 +49,12 @@ export function Header({ navigation }: { navigation: NavigationMenu }) {
     <>
       <header
         className={`
-        fixed inset-x-0 top-0 z-50 transition-all duration-300
+        fixed inset-x-0 top-0 z-50 transition-all duration-300 h-[80px] md:h-[100px]
         ${isScrolled ? 'bg-white border-b border-neutral-200/80' : 'bg-transparent'}
       `}
-        style={{ height: '80px' }}
       >
         <nav className="mx-auto max-w-7xl px-4 h-full flex items-center justify-between">
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 h-full">
             <Link href="/">
               <Image
                 src="/images/bav-logo.png"
@@ -69,7 +68,7 @@ export function Header({ navigation }: { navigation: NavigationMenu }) {
 
           {/* Desktop Navigation */}
           <div
-            className={`hidden lg:flex items-center gap-6 text-sm ${
+            className={`hidden lg:flex items-center gap-6 text-sm h-full ${
               isScrolled ? 'text-neutral-800' : 'text-white'
             }`}
           >
