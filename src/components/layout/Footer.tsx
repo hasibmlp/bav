@@ -34,7 +34,7 @@ export function Footer({ navigation }: { navigation: NavigationMenu }) {
               />
             </Link>
             <div className="mt-2">
-              <p className="text-white text-sm">{t('tagline')}</p>
+              <p className="text-white text-sm ps-6">{t('tagline')}</p>
             </div>
           </div>
           <div className="grid gap-2">

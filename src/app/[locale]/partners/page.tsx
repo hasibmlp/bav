@@ -12,7 +12,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const renderSection = (section: SectionView, i: number) => {
     switch (section.type) {
       case 'hero':
-        return <PageHero key={i} data={section} heroImage={page.heroImage} />
+        return <PageHero key={i} data={section} />
       case 'partners_showcase':
         return <PartnersShowcase key={i} data={section} />
       case 'cta':
